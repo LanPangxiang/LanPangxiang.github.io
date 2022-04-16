@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Title -->
+<title>模拟用户出行决策 - Hexo</title>
+
+<!-- Icon -->
+<link rel="icon" href="https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg">
+
+<!-- Fonts -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" as="style" onload="this.onload=null, this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"></noscript>
+
+
+
+<!-- Style -->
+
+<link rel="stylesheet" href="/styles/main.css">
+
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-pure@1.0.1/dist/main.css"> -->
+
+
+
+
+
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+
+    <meta name="generator" content="Hexo 6.1.0"></head>
+    <body>
+        <div class="main gt-bg-theme-color-first">
+            <div class="main-content">
+                <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="/">
+        <img class="user-avatar" src="https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            Hexo
+        </div>
+    </a>
+    <button aria-label="Navbar Toggler" class="navbar-toggler" type="button" id="changeNavbar">
+        <i class="gt-c-content-color-first" style="font-size: 18px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18px" fill="currentColor">
+                <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
+            </svg>
+        </i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center; ">
+            
+                <div class="nav-item">
+                    <a href="/" class="menu gt-a-link" target="_self">首页</a>
+                </div>
+            
+                <div class="nav-item">
+                    <a href="/archives/" class="menu gt-a-link" target="_self">归档</a>
+                </div>
+            
+                <div class="nav-item">
+                    <a href="/tags/" class="menu gt-a-link" target="_self">标签</a>
+                </div>
+            
+                <div class="nav-item">
+                    <a href="/friends/" class="menu gt-a-link" target="_self">友链</a>
+                </div>
+            
+        </div>
+    </div>
+</nav>
+
+<script>
+    /* 移动端导航栏展开/收起切换 */
+    document.getElementById('changeNavbar').onclick = function() {
+        let element = document.getElementById('navbarSupportedContent');
+        if (element.style.display === 'none' || element.style.display === '') {
+            element.style.display = 'block';
+        } else { 
+            element.style.display = 'none';
+        }
+    }
+</script>
+
+                <div class="post-container">
+    <div class="post-detail gt-bg-theme-color-second gt-c-content-color-first">
+        <article class="gt-post-content">
+            <h1 class="post-title">模拟用户出行决策</h1>
+            <div class="post-info">
+                <time class="post-time gt-c-content-color-first">
+                    · 2022-04-01 ·</time>
+                
+                    
+                
+            </div>
+            <hr>
+            <div class="post-content gt-c-content-color-first">
+                <h2 id="A-novel-next-new-point-of-interest-recommendation-system-based-on-simulated-user-travel-decision-making-process"><a href="#A-novel-next-new-point-of-interest-recommendation-system-based-on-simulated-user-travel-decision-making-process" class="headerlink" title="A novel next new point-of-interest recommendation system based on simulated user travel decision-making process"></a><strong>A novel next new point-of-interest recommendation system based on simulated user travel decision-making process</strong></h2><h1 id="一：写作动机："><a href="#一：写作动机：" class="headerlink" title="一：写作动机："></a>一：写作动机：</h1><p>1：一般的POI推荐系统只考虑未来哪些POI用户可以访问，并且无法预测用户希望在下一个时间间隔内访问哪里，一般的POI推荐系统并不考虑此用户以前是否已访问过向用户推荐的POI。</p>
+<p>2：下一个新的POI推荐问题更具挑战性，因为与POI和用户相关的多个因素需要全面纳入统一的推荐系统。</p>
+<p>3：为了给用户提供一个POI推荐系统更实用，更好的体验，以下一个新的POI推荐系统为研究对象。</p>
+<h1 id="二：模型和方法："><a href="#二：模型和方法：" class="headerlink" title="二：模型和方法："></a>二：模型和方法：</h1><p>系统通过权衡影响用户旅行决策的两个重要因素来模拟用户的旅行决策过程：偏好因素和地理因素。使用张量来建模用户的签入历史记录，并动态预测用户偏好。 然后，为了表征地理因素对个体用户的影响，设计了一种个性化的用户相似性计算方法，并为目标用户拟合曲线，以反映旅行距离与旅行概率之间的关系。 最后，结合这两个因素对特定用户的影响，生成推荐列表。</p>
+<p><img src="/%E6%A8%A1%E6%8B%9F%E7%94%A8%E6%88%B7%E5%87%BA%E8%A1%8C%E5%86%B3%E7%AD%96/202241620202.bmp" alt="202241620202"></p>
+<p>1：将一个人的旅行决策过程分为三个步骤：</p>
+<p>①：偏好决定：不同的人在不同的时间段内对兴趣点的偏好是不一样的。（偏好动态预测模块：可以根据时间的变化对用户的偏好进行预测和排序：使用张量来建模用户的时间偏好，选用非负张量分解方法。）</p>
+<p>②：理解距离：一切都与其他事物相关，但靠近自己的事物比遥远的事物更相关，理解距离是指一个人对某一距离是远是近的感知。众所周知，不同的人对一个特定的距离有不同的感觉。而同一个人对同一距离的感觉在不同的语境下也可能会有所不同。（地理影响曲线拟合模块：可以亲自反映单个用户在不同时间间隔内的出行概率与出行距离的关系：基于目标用户与其他用户直接建立一个虚拟的公共访问序列来计算用户相似度，并且用户相似性是具有方向性的。）</p>
+<p>③：目的地决定：根据偏好因素和距离因素的主导地位，确定最终下一个会访问的目的地。（下一个新的POI推荐模块：可以根据预测的偏好概率和用户在不同距离上的旅行概率计算被推荐的POI的排名分数，并生成推荐列表：计算每个POI在候选集（属于这些预测偏好的POI在当前时间TC之前没有访问过，构成推荐候选的集合）中的排名分数，然后根据排名分数按降序排序候选集。 最后，向用户UI推荐top-nPOI。）</p>
+<h1 id="三：总结："><a href="#三：总结：" class="headerlink" title="三：总结："></a>三：总结：</h1><p>我们的推荐过程模拟用户出行决策过程。 我们的方法将用户偏好、顺序影响和地理影响集成到一个统一的推荐过程中。 我们的推荐系统可以根据时间的变化动态预测用户的偏好，并在用户决定目的地时权衡偏好因素和地理因素两个因素。 此外，我们还设计了一种新的个性化用户相似性计算方法，并为每个单一用户建立了一条曲线，以定量测量POI访问w.r.t的概率。 不同时隙中的行程距离。</p>
+<h1 id="文章的创新点："><a href="#文章的创新点：" class="headerlink" title="文章的创新点："></a><strong>文章的创新点：</strong></h1><p>1：模拟用户的旅行决策过程，并考虑影响人们旅行目的地选择的两个重要因素：偏好因素和地理因素，并将它们集成到一个统一的推荐过程中</p>
+<p>2：利用张量来根据POI的分类属性和签入数据的时间信息来建模用户的签入历史，这克服了签入数据的稀疏性。 此外，还实现了用户偏好的动态预测。</p>
+<p>3：拟合一条曲线，以亲自反映用户的旅行距离和旅行概率之间的关系。 由于单个用户签到数据的稀疏性，为两个用户建立了虚拟公共访问序列，并设计了一种新的用户相似性算法，以相似用户的签到数据作为目标用户数据的补充，找到与目标用户具有相似历史行为的用户。</p>
+<h1 id="思考："><a href="#思考：" class="headerlink" title="思考："></a><strong>思考：</strong></h1><p>本篇论文主要是个性化的预测下一个POI，但是它的方法有很大的创新，不同于传统只是加一些限制因子，或者是单纯的把几个部分整合。特别是计算用户相似度的部分，传统的用户相似度计算方法大多只考虑用户偏好的单一因素，而忽略了时间、地理和序列等同样重要的因素。同时用自己的实验证明了序列影响的使用对于下一个新的POI建议非常重要。模拟真实的旅游选择过程，就光用户相似度计算方面运用到其余论文中结果就会有一些提升。</p>
+
+            </div>
+        </article>
+    </div>
+    <br>
+    
+        <div class="next-prev-post">
+            
+            
+                <div class="next-post">
+                    <div class="next gt-c-content-color-first">
+                        下一篇：<a href="/2021/05/10/GERec/" 
+                            class="post-title gt-a-link">GERec</a>
+                    </div>
+                </div>
+            
+        </div>
+    
+    
+
+    
+
+    
+</div>
+
+                <div class="site-footer gt-c-content-color-first">
+    <div class="footer-main">
+        <!-- 建议保留版权信息或者添加主题信息到友链，感谢您的理解 -->
+        <!-- 文件位置：layout/_includes/footer.ejs -->
+        <span style="text-align: right; float: right;">Theme <a 
+            href="https://github.com/renbaoshuo/hexo-theme-pure" target="_blank">Pure</a> | Powered by <a 
+            href="https://hexo.io" target="_blank">Hexo</a></span>
+        <span style="text-align: left;">Footer HTML
+</span>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </body>
+</html>

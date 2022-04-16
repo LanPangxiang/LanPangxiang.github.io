@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Title -->
-<title>深度学习+POI综述 - Hexo</title>
+<title>POI综述 - Hexo</title>
 
 <!-- Icon -->
 <link rel="icon" href="https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg">
@@ -85,30 +85,41 @@
                 <div class="post-container">
     <div class="post-detail gt-bg-theme-color-second gt-c-content-color-first">
         <article class="gt-post-content">
-            <h1 class="post-title">深度学习+POI综述</h1>
+            <h1 class="post-title">POI综述</h1>
             <div class="post-info">
                 <time class="post-time gt-c-content-color-first">
-                    · 2021-02-01 ·</time>
+                    · 2020-10-15 ·</time>
                 
                     
                 
             </div>
             <hr>
             <div class="post-content gt-c-content-color-first">
-                <h2 id="融合深度学习技术的用户兴趣点推荐研究综述"><a href="#融合深度学习技术的用户兴趣点推荐研究综述" class="headerlink" title="融合深度学习技术的用户兴趣点推荐研究综述"></a>融合深度学习技术的用户兴趣点推荐研究综述</h2><h1 id="一：写作动机："><a href="#一：写作动机：" class="headerlink" title="一：写作动机："></a>一：写作动机：</h1><p>1.国内目前对于兴趣点推荐系统的归纳总结类综述文章较为匮乏，更是缺少对于最新兴趣点推荐研究的总结。</p>
-<p>2.对用户进行个性化 POI推荐有别于传统推荐任务，它既具有传统推荐任务的固有缺陷，又具有 POI本身包含的众多特征因素的影响，因此如何既准确捕捉用户与 POI 之间的复杂关系，又利用辅助信息提高推荐性能就具有很大的挑战性。</p>
-<p>3.整理并分析近几年融合深度学习技术与 POI 推荐工作的结合方式。</p>
-<h1 id="二：模型和方法："><a href="#二：模型和方法：" class="headerlink" title="二：模型和方法："></a>二：模型和方法：</h1><p>融合深度学习技术与 POI 推荐工作的结合方式，按技术流派将POI推荐分为POI的向量化学习、深度协同过滤、从辅助内容中提取特征和利用 RNN 进行序列推荐 4 类。</p>
-<p>①POI的向量化学习：通过对每个特征学习，可以自定义大小的隐向量，利用向量之间存在相似性的优势解决维度变化之后特征失去联系的问题。</p>
-<p>②深度协同过滤：利用神经网络模型取代MF生成的内积结果，提升在大规模数据集下学习隐性特征之间任意复杂函数关系的学习能力</p>
-<p>③从辅助内容中提取特征：</p>
-<p>1)：文本内容抽取:评论信息在相关 POI 研究工作中并没有真正得到充分的利用，但是充分挖掘与用户访问位置相关联的评论文本内容特征对提升推荐性能十分有益。</p>
-<p>2)：图像内容抽取：评论中图像通常包含了比文本丰富的信息，如果对其进行挖掘会对 LSBN 上的用户或商家都带来很大的帮助</p>
-<p>④利用 RNN 进行序列推荐：利用 RNN 模型对用户访问数据中的序列性进行建模学习是当前融合深度学习技术的 POI 推荐任务中最广为利用的手段，可以有效解决用户对POI的偏好随时间和地域变化而动态更改的问题，训练后的模型也在该推荐任务中取得了最优的表现，既可以解决基于马尔可夫链的方式会因为不同影响因素之间的强独立性假设限制模型性能的问题，也可以解决 MF由于将时空影响因素作为单独维度纳入会面临的冷启动问题。</p>
-<h1 id="三：总结："><a href="#三：总结：" class="headerlink" title="三：总结："></a>三：总结：</h1><p>1：这篇综述并没有详细说传统的POI推荐（CF,二分图嵌入模型)上周读的综述里面关于传统方法POI推荐较详细，这篇主要说的是关于深度学习模型的POI推荐，一方面是论文阅读量比较少，另一方面确实觉得深度学习模型更难一点，但是由于深度学习具有表征能力和抗噪能力强等优点，推荐效果更好，而且部分模型能解决冷启动问题、动态、序列问题等。</p>
-<p>2：给出了POI推荐可能的未来发展趋势：1）.解决聚集 POI问题。2）.将多任务学习(multi-task learning，MLT)应用在 POI推荐任务。3）.解决数据隐私问题。</p>
-<p>3：综述里提到了关于用户的社交因素对POI推荐性能的提高并不是特别明显。</p>
-<h1 id="思考："><a href="#思考：" class="headerlink" title="思考："></a>思考：</h1><p>传统的POI推荐方法是基础，而且取得的研究成果较多，提出创新点的难度偏大。深度学习模型的难度较大，读的过程中确实有很多地方是不懂得，深度学习是近几年比较流行的方法，慢慢学习深度学习的方法掌握好对模型以及深度学习的理解，然后再进行创新。</p>
+                <h2 id="Survey-of-Point-of-interest-Recommendation-in-Location-based-Social-Networks"><a href="#Survey-of-Point-of-interest-Recommendation-in-Location-based-Social-Networks" class="headerlink" title="Survey of Point-of-interest Recommendation in Location-based Social Networks"></a><strong>Survey of Point-of-interest Recommendation in Location-based Social Networks</strong></h2><h1 id="一：写作动机："><a href="#一：写作动机：" class="headerlink" title="一：写作动机："></a>一：写作动机：</h1><p>1：对基于LBNS的兴趣点推荐这一领域进行了系统的回顾和总结。</p>
+<h1 id="二：模型和方法："><a href="#二：模型和方法：" class="headerlink" title="二：模型和方法："></a>二：模型和方法：</h1><p>一：影响因素分类：</p>
+<p>1：地理影响：</p>
+<p>1）：power law distribution model（幂律分布模型）：在LBSNs中发现用户签入活动中的类似幂律分布模式，并且两个POIs在两个POIs之间距离上的共现概率分布呈现出幂律分布形式。</p>
+<p>2）：Gaussian distribution model（高斯分布模型）：LBSNS中的用户总是围绕一些活动中心，例如家庭和办公室，所以给出了多中心集Cu，提出了多中心高斯模型。</p>
+<p>3）：kernel density estimation model（核密度估计模型）：对每个用户的地理影响应该是个性化的，而不是通过共同的分布来建模，核密度估计模型利用每个用户的个性化距离分布来模拟地理影响。</p>
+<p>2：社会影响：</p>
+<p>基于内存的方法（减少运行内存的计算量）和基于模型的方法（和CF或者MF相结合）</p>
+<p>3：时间影响：</p>
+<p>1）periodicity（周期性）：用户在同一时间段访问相同或相似的POI：工作日上班，周末购物，中午吃饭等。</p>
+<p>consecutiveness（连续性）：在一定的时间段内，用户的签到行为是具有连续性的，这种频繁的签到模式意味着连续签到的POIS在地理上是相邻的，从发生地的功能（venue function）的角度来看是相关的：通常利用马尔可夫链（Markov chain）对序列模式进行建模。</p>
+<p>non-uniformness（非统一性）：描述的是用户在一天的不同小时，一年的不同月，一星期的不同天的用户偏好之间的差异。</p>
+<p>4：内容影响：</p>
+<p>二：方法的分类：</p>
+<p>Fused Model （融合模型）：融合模型融合了协作过滤方法的推荐结果和捕捉地理影响、社会影响和时间影响模型的推荐结果，通常为每个影响因素建立一个模型，并将它们的推荐结果与协作过滤模型的研究结合起来捕捉用户对POIS的偏好。</p>
+<p>Joint Model（联合模型）：联合模型建立了一个联合模型，共同学习用户偏好和影响因素。</p>
+<p>其包括两种类型：1：将因素（如地理影响和时间影响）纳入传统的协同过滤模型，如矩阵分解和张量分解。2：生成一个图形模型符合签到和额外的影响，如地理信息。</p>
+<p>这两种类型的关键区别在于对用户签到的不同分布假设：第一种类型基于假设高斯分布的协作过滤模型，而第二种类型则利用其他类型，如POSSION分布。</p>
+<p>三：任务的分类（在是否偏向最近的签到方面）：</p>
+<p>1.一般推荐：推荐一个TOP-N的列表。</p>
+<p>2.连续推荐：连续的POI推荐不推荐用户POIS的一般列表，而是对他们最近的签入敏感的列表。</p>
+<p>四：趋势和新方向：</p>
+<p>1.基于排名的模型： 以前的大多数方法通常试图估计用户在POI上的签入概率。 然而，对于POI推荐任务，我们并不真正关心预测的签入可能性值，而是偏好顺序。 贝叶斯个性化排序(BPR)损失和加权近似秩成对(WARP)损失是学习排序顺序的两个流行标准</p>
+<p>2.在线推荐：在线POI推荐模型在两个方面优于离线模型：冷启动问题和对用户行为差异的适应性。（这个可以重点关注一下，冷启动问题的解决方法有很多了）</p>
+<h1 id="三：总结："><a href="#三：总结：" class="headerlink" title="三：总结："></a>三：总结：</h1><p>对基于LBNS的兴趣点推荐这一领域进行了系统的回顾，总结了个人努力的贡献，并探讨了它们之间的关系。 与传统的推荐问题（如电影推荐）相比，讨论了POI推荐中的新属性和挑战。</p>
 
             </div>
         </article>
@@ -119,18 +130,11 @@
             
                 <div class="prev-post">
                     <div class="prev gt-c-content-color-first">
-                        上一篇：<a href="/2021/03/05/TRAR/" 
-                            class="post-title gt-a-link">TRAR</a>
+                        上一篇：<a href="/2020/12/07/POI2Vec/" 
+                            class="post-title gt-a-link">POI2Vec</a>
                     </div>
                 </div>
             
-            
-                <div class="next-post">
-                    <div class="next gt-c-content-color-first">
-                        下一篇：<a href="/2021/01/12/LA+RW/" 
-                            class="post-title gt-a-link">LA+RW</a>
-                    </div>
-                </div>
             
         </div>
     

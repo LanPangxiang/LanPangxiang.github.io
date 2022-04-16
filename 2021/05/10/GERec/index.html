@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Title -->
-<title>TRAR - Hexo</title>
+<title>GERec - Hexo</title>
 
 <!-- Icon -->
 <link rel="icon" href="https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg">
@@ -85,24 +85,25 @@
                 <div class="post-container">
     <div class="post-detail gt-bg-theme-color-second gt-c-content-color-first">
         <article class="gt-post-content">
-            <h1 class="post-title">TRAR</h1>
+            <h1 class="post-title">GERec</h1>
             <div class="post-info">
                 <time class="post-time gt-c-content-color-first">
-                    · 2022-04-16 ·</time>
+                    · 2021-05-10 ·</time>
                 
                     
                 
             </div>
             <hr>
             <div class="post-content gt-c-content-color-first">
-                <h2 id="Enhancing-Personalized-Trip-Recommendation-with-Attractive-Routes"><a href="#Enhancing-Personalized-Trip-Recommendation-with-Attractive-Routes" class="headerlink" title="Enhancing Personalized Trip Recommendation with Attractive Routes"></a><strong>Enhancing Personalized Trip Recommendation with Attractive Routes</strong></h2><h1 id="一：写作动机："><a href="#一：写作动机：" class="headerlink" title="一：写作动机："></a>一：写作动机：</h1><p>大多数现有的研究只根据POIS本身的流行程度来搜索POI。 事实上，POI之间的路线也有吸引游客的地方，其中一些路线很受欢迎。</p>
-<h1 id="二：模型和方法："><a href="#二：模型和方法：" class="headerlink" title="二：模型和方法："></a>二：模型和方法：</h1><p>TRAR：一个个性化的旅行推荐与POI和吸引力路线（AR）。 它根据POI的流行程度和基尼系数发现了吸引路线，然后利用类别空间中的a gravity model来估计吸引路线的评分和偏好，AR偏好由用户偏好的聚类中心来衡量。</p>
-<p>对于具有n个POI的区域，构造了一个以n个节点为POI的旅行图G(V，E)；这些n个节点在用户的时间约束下可以访问，考虑了POI的时间信息。根据用户的偏好分数选择top-k个POI。 由这些选定的POIs生成一个新的图作为G’(V’，E’)它是G的子图。</p>
-<p><img src="/TRAR/202241617106-16501104416241.bmp" alt="202241617106"></p>
-<h1 id="三：总结："><a href="#三：总结：" class="headerlink" title="三：总结："></a>三：总结：</h1><p>1：确定了一种新的路线称为吸引路线，并提出了一种新的方法，称为TRAR的个性化推荐旅行与AR。 TRAR根据POI的流行度和基尼系数发现了吸引人的路线，提出了在类别空间下的a gravity model来估计吸引路线的评分和偏好，通过估计用户是否会访问有吸引力的路线，最大限度地提高用户沿旅行的体验。</p>
-<p>2：在AR评估过程中，TRAR通过无监督学习获得每个AR的偏好。</p>
-<p>3：考虑到有吸引力的路线的个性化旅行推荐工作。 通过不同数据集的一系列实验，验证了TRAR的有效性，并表明TRAR在不同条件下表现良好。</p>
-<h1 id="思考："><a href="#思考：" class="headerlink" title="思考："></a><strong>思考：</strong></h1><p>本文的创新点都在总结中表述了，对于旅游路线推荐方面的POI应用，这篇论文确实有很大的可取之处，因为我的毕业论文的想法就是想把AI比赛的那个旅游路线做出来，当时的想法虽然考虑了地点流行度，个人偏好，时间等因素，但是对于路线方面是没有过多的考虑的，考虑的是所以旅游路线下来最后所用时间最短为目的，这篇比较好，它考虑的并不一定是时间最短就是好的，有的游客喜欢那些受欢迎的有吸引力的路线，在旅游时间不超过最大时间的范围内，其实这是一种增加用户旅游体验感的一种很好的方法，我觉得如果我准备做旅游路线推荐的话，这个是个很好的参考。</p>
+                <h2 id="Relation-Embedding-for-Personalised-Translation-based-POI-Recommendation"><a href="#Relation-Embedding-for-Personalised-Translation-based-POI-Recommendation" class="headerlink" title="Relation Embedding for Personalised Translation-based POI Recommendation"></a><strong>Relation Embedding for Personalised Translation-based POI Recommendation</strong></h2><h1 id="一：写作动机："><a href="#一：写作动机：" class="headerlink" title="一：写作动机："></a>一：写作动机：</h1><p>1：User-POI矩阵的极度稀疏和不同种类的时空上下文给poi推荐带来了挑战。</p>
+<h1 id="二：模型和方法："><a href="#二：模型和方法：" class="headerlink" title="二：模型和方法："></a>二：模型和方法：</h1><p>1：用户-POI图嵌入</p>
+<p>通过图嵌入方法，为了克服来自时空上下文的挑战，GERec编码时间和空间信息，以及低维潜在空间中的用户动态签入活动。</p>
+<p><img src="/GERec/202241620539.bmp" alt="202241620539"></p>
+<p>用三元组表示用户和poi以及其中的交互特征。定义了一个基于时空和基于语义的关系路径表示法，                       它由基于时间的关系路径<strong>r</strong>t、基于地理的关系路径<strong>r</strong>l和基于语义的关系路径<strong>r</strong>c组成。</p>
+<p>2：整合基于时空的MF和基于用户偏好的MF 与用图嵌入处理的user-poi矩阵</p>
+<h1 id="三：总结："><a href="#三：总结：" class="headerlink" title="三：总结："></a>三：总结：</h1><p>提了一种基于转化的POI推荐模型，可以有效地构建用户POI图并对边信息建模。为了解决时间推理和地理问题，提出了一种时空关系路径嵌入方法来对时间、空间和语义内容信息进行建模，以利用用户-POI交互数据来提高用户嵌入的学习能力。为了克服用户-POI交互数据的稀疏性，我们开发了一个嵌入函数来弥补基于翻译的嵌入模型和传统的基于MF的模型之间的差距。用户-POI图与融合的MF模型集成，以提高POI推荐的偏好。</p>
+<h1 id="文章的创新点："><a href="#文章的创新点：" class="headerlink" title="文章的创新点："></a><strong>文章的创新点：</strong></h1><p>1：为了克服数据稀疏性问题，提出了一种新的基于解释的POI推荐模型，该模型可以有效地构建用户POI图，并建模侧信息，如空间、时间和语义内容信息。</p>
+<p>2：提出了一种时空关系路径嵌入方法来对时间、空间和语义内容信息进行建模，以提高POI推荐的偏好。</p>
 
             </div>
         </article>
@@ -111,11 +112,18 @@
     
         <div class="next-prev-post">
             
+                <div class="prev-post">
+                    <div class="prev gt-c-content-color-first">
+                        上一篇：<a href="/2022/04/01/%E6%A8%A1%E6%8B%9F%E7%94%A8%E6%88%B7%E5%87%BA%E8%A1%8C%E5%86%B3%E7%AD%96/" 
+                            class="post-title gt-a-link">模拟用户出行决策</a>
+                    </div>
+                </div>
+            
             
                 <div class="next-post">
                     <div class="next gt-c-content-color-first">
-                        下一篇：<a href="/2021/02/01/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-POI%E7%BB%BC%E8%BF%B0/" 
-                            class="post-title gt-a-link">深度学习+POI综述</a>
+                        下一篇：<a href="/2021/04/28/HCT/" 
+                            class="post-title gt-a-link">HCT</a>
                     </div>
                 </div>
             
