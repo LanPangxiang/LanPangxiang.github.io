@@ -88,14 +88,35 @@
             <h1 class="post-title">TimeSAN</h1>
             <div class="post-info">
                 <time class="post-time gt-c-content-color-first">
-                    · 2022-04-16 ·</time>
+                    · 2021-06-08 ·</time>
                 
                     
                 
             </div>
             <hr>
             <div class="post-content gt-c-content-color-first">
-                
+                <h2 id="Bridging-Collaborative-Filtering-and-Semi-Supervised-Learning-A-Neural-Approach-for-POI-Recommendation"><a href="#Bridging-Collaborative-Filtering-and-Semi-Supervised-Learning-A-Neural-Approach-for-POI-Recommendation" class="headerlink" title="Bridging Collaborative Filtering and Semi-Supervised Learning: A Neural Approach for POI Recommendation"></a>Bridging Collaborative Filtering and Semi-Supervised Learning: A Neural Approach for POI Recommendation</h2><h1 id="一：写作动机："><a href="#一：写作动机：" class="headerlink" title="一：写作动机："></a>一：写作动机：</h1><p>1.基于分解的方法由于附加维数，可能存在数据稀疏性问题并且很难确定用于时间段映射的时间粒度。</p>
+<p>2.基于循环神经网络的方法使用有时间感知的上下文门来更新RNN中的隐藏状态和单元状态，这可能在捕获长期的时间动态方面的能力有限。</p>
+<h1 id="二：模型和方法："><a href="#二：模型和方法：" class="headerlink" title="二：模型和方法："></a>二：模型和方法：</h1><p>1:嵌入层</p>
+<p>①  ：一个poi序列的嵌入：</p>
+<p>提出了两个嵌入矩阵 ：poi嵌入矩阵L和位置编码嵌入矩阵P</p>
+<p>第i次签到的潜在嵌入计算为E(i)&#x3D;L(si)+P(i){L(si): poi si的嵌入向量；P(i):索引i的位置编码。</p>
+<p>②  ：时间上下文的嵌入：</p>
+<p><img src="/TimeSAN/2022416205727.bmp" alt="2022416205727"></p>
+<p>提取了两个有时间上下文的序列。提出了一种多尺度的周期时间编码，它映射了具有一组不同频率的函数的时间戳的特征向量 <strong>f</strong>（ti）是根据sin&#x2F;cos函数计算的。</p>
+<p>2：受时间影响的自注意力机制</p>
+<p><img src="/TimeSAN/2022416205733.bmp" alt="2022416205733">                      </p>
+<p>3：Point-Wise feed forward layer</p>
+<p><img src="/TimeSAN/2022416205743.bmp" alt="2022416205743"></p>
+<p>4：整合长期兴趣</p>
+<p><img src="/TimeSAN/2022416205747.bmp" alt="2022416205747"></p>
+<p>5：模型训练<img src="/TimeSAN/2022416205752.bmp" alt="2022416205752"></p>
+<p><img src="/TimeSAN/202241621124.bmp" alt="202241621124"></p>
+<h1 id="三：总结："><a href="#三：总结：" class="headerlink" title="三：总结："></a>三：总结：</h1><p>TimeSAN使用一个时间调制的自注意模块来有效地学习用户兴趣中的时间动态。具体来说，TimeSAN通过自我注意机制学习用户的历史记录和下一次POI访问之间的相关性，并调节与时间上下文的相关性。此外，还提出了一种融合机制，使其能够更有效地学习用户的长期兴趣。我们证明了所提出的时间调制自注意模块可以有效地捕获时间上下文的影响。</p>
+<h1 id="文章的创新点："><a href="#文章的创新点：" class="headerlink" title="文章的创新点："></a><strong>文章的创新点：</strong></h1><p>1：提出了一个时间调制的自注意网络的时间感知的下一个POI推荐。该模型利用所提出的时间调制自注意模块来捕捉时间上下文对用户偏好的影响。</p>
+<p>2：提出了一种多尺度周期编码的时间上下文，这有助于捕获用户偏好的时间动态。</p>
+<h1 id="思考："><a href="#思考：" class="headerlink" title="思考："></a><strong>思考：</strong></h1><p>这篇论文主要的创新点就是在于时间方面，处理时间的方式一般都是时间戳形式，这个还是比较新颖的。</p>
+
             </div>
         </article>
     </div>
@@ -103,11 +124,18 @@
     
         <div class="next-prev-post">
             
+                <div class="prev-post">
+                    <div class="prev gt-c-content-color-first">
+                        上一篇：<a href="/2021/06/17/LSTPM/" 
+                            class="post-title gt-a-link">LSTPM</a>
+                    </div>
+                </div>
+            
             
                 <div class="next-post">
                     <div class="next gt-c-content-color-first">
-                        下一篇：<a href="/2022/04/01/%E6%A8%A1%E6%8B%9F%E7%94%A8%E6%88%B7%E5%87%BA%E8%A1%8C%E5%86%B3%E7%AD%96/" 
-                            class="post-title gt-a-link">模拟用户出行决策</a>
+                        下一篇：<a href="/2021/05/10/GERec/" 
+                            class="post-title gt-a-link">GERec</a>
                     </div>
                 </div>
             

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Title -->
-<title>归档 - Hexo</title>
+<title>LSTPM - Hexo</title>
 
 <!-- Icon -->
 <link rel="icon" href="https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg">
@@ -82,41 +82,48 @@
     }
 </script>
 
-                <div class="archives-container gt-bg-theme-color-second">
-    <div class="gt-post-content">
-        
-        
-            <h2 id="year-2022" class="year gt-c-content-color-first">2022</h2>
-            
-            
+                <div class="post-container">
+    <div class="post-detail gt-bg-theme-color-second gt-c-content-color-first">
+        <article class="gt-post-content">
+            <h1 class="post-title">LSTPM</h1>
+            <div class="post-info">
+                <time class="post-time gt-c-content-color-first">
+                    · 2021-06-17 ·</time>
                 
-                    <div class="post" style="margin-left: 15px;">
-                        <a href="/2022/04/16/TimeSAN/">
-                            <div class="post-title gt-c-content-color-first">
-                                <small><b>2022-04-16</b></small>
-                                <div class="archives-post-title">TimeSAN</div>
-                            </div>
-                        </a>
-                    </div>
+                    
                 
-            
-                
-                    <div class="post" style="margin-left: 15px;">
-                        <a href="/2022/04/01/%E6%A8%A1%E6%8B%9F%E7%94%A8%E6%88%B7%E5%87%BA%E8%A1%8C%E5%86%B3%E7%AD%96/">
-                            <div class="post-title gt-c-content-color-first">
-                                <small><b>2022-04-01</b></small>
-                                <div class="archives-post-title">模拟用户出行决策</div>
-                            </div>
-                        </a>
-                    </div>
-                
-            
-        
-    </div>
-</div>
+            </div>
+            <hr>
+            <div class="post-content gt-c-content-color-first">
+                <h2 id="Where-to-Go-Next-Modeling-Long-and-Short-Term-User-Preferences-for-Point-of-Interest-Recommendation"><a href="#Where-to-Go-Next-Modeling-Long-and-Short-Term-User-Preferences-for-Point-of-Interest-Recommendation" class="headerlink" title="Where to Go Next: Modeling Long- and Short-Term User Preferences for Point-of-Interest Recommendation"></a><strong>Where to Go Next: Modeling Long- and Short-Term User Preferences for Point-of-Interest Recommendation</strong></h2><h1 id="一：写作动机："><a href="#一：写作动机：" class="headerlink" title="一：写作动机："></a>一：写作动机：</h1><p>1：现有的基于RNN的方法，在建模用户的短期偏好时，要么忽略了用户的长期偏好，要么忽略了最近访问的POI之间的地理关系。</p>
+<p>2：RNN只能按照用户的签入序列建模连续的活动。</p>
+<h1 id="二：模型和方法："><a href="#二：模型和方法：" class="headerlink" title="二：模型和方法："></a>二：模型和方法：</h1><p><img src="/LSTPM/202241621957.bmp" alt="202241621957"></p>
+<p><img src="/LSTPM/202241621102.bmp" alt="202241621102">              </p>
+<p>模型没有很难的地方。         </p>
+<h1 id="三：总结："><a href="#三：总结：" class="headerlink" title="三：总结："></a>三：总结：</h1><p>实验结果表明，与最先进的方法相比，我们提出的方法大大提高了推荐精度。值得注意的是，虽然我们提出的方法优于所有基线，但我们意识到POI建议中的常见问题，即低召回率和NDCG分数。由于高稀疏性，数据是合理的。</p>
+<h1 id="文章的创新点："><a href="#文章的创新点：" class="headerlink" title="文章的创新点："></a><strong>文章的创新点：</strong></h1><p>开发了一个具有上下文感知能力的非局部网络来建模长期偏好，以及一个地理扩展的LSTM来建模短期偏好。（由一个用于长期偏好建模的非局部网络和一个用于短期偏好学习的地理扩展的RNN组成。）</p>
 
-<div class="pagination-container">
+            </div>
+        </article>
+    </div>
+    <br>
     
+        <div class="next-prev-post">
+            
+            
+                <div class="next-post">
+                    <div class="next gt-c-content-color-first">
+                        下一篇：<a href="/2021/06/08/TimeSAN/" 
+                            class="post-title gt-a-link">TimeSAN</a>
+                    </div>
+                </div>
+            
+        </div>
+    
+    
+
+    
+
     
 </div>
 
