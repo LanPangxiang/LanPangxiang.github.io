@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Title -->
+<title>LA+RW - Hexo</title>
+
+<!-- Icon -->
+<link rel="icon" href="https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg">
+
+<!-- Fonts -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" as="style" onload="this.onload=null, this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"></noscript>
+
+
+
+<!-- Style -->
+
+<link rel="stylesheet" href="/styles/main.css">
+
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-pure@1.0.1/dist/main.css"> -->
+
+
+
+
+
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+
+    <meta name="generator" content="Hexo 6.1.0"></head>
+    <body>
+        <div class="main gt-bg-theme-color-first">
+            <div class="main-content">
+                <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="/">
+        <img class="user-avatar" src="https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            Hexo
+        </div>
+    </a>
+    <button aria-label="Navbar Toggler" class="navbar-toggler" type="button" id="changeNavbar">
+        <i class="gt-c-content-color-first" style="font-size: 18px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18px" fill="currentColor">
+                <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
+            </svg>
+        </i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center; ">
+            
+                <div class="nav-item">
+                    <a href="/" class="menu gt-a-link" target="_self">首页</a>
+                </div>
+            
+                <div class="nav-item">
+                    <a href="/archives/" class="menu gt-a-link" target="_self">归档</a>
+                </div>
+            
+                <div class="nav-item">
+                    <a href="/tags/" class="menu gt-a-link" target="_self">标签</a>
+                </div>
+            
+                <div class="nav-item">
+                    <a href="/friends/" class="menu gt-a-link" target="_self">友链</a>
+                </div>
+            
+        </div>
+    </div>
+</nav>
+
+<script>
+    /* 移动端导航栏展开/收起切换 */
+    document.getElementById('changeNavbar').onclick = function() {
+        let element = document.getElementById('navbarSupportedContent');
+        if (element.style.display === 'none' || element.style.display === '') {
+            element.style.display = 'block';
+        } else { 
+            element.style.display = 'none';
+        }
+    }
+</script>
+
+                <div class="post-container">
+    <div class="post-detail gt-bg-theme-color-second gt-c-content-color-first">
+        <article class="gt-post-content">
+            <h1 class="post-title">LA+RW</h1>
+            <div class="post-info">
+                <time class="post-time gt-c-content-color-first">
+                    · 2021-01-12 ·</time>
+                
+                    
+                
+            </div>
+            <hr>
+            <div class="post-content gt-c-content-color-first">
+                <h2 id="Point-of-Interest-Recommendations-Learning-Potential-Check-ins-from-Friends"><a href="#Point-of-Interest-Recommendations-Learning-Potential-Check-ins-from-Friends" class="headerlink" title="Point-of-Interest Recommendations: Learning Potential Check-ins from Friends"></a>Point-of-Interest Recommendations: Learning Potential Check-ins from Friends</h2><h1 id="一：写作动机："><a href="#一：写作动机：" class="headerlink" title="一：写作动机："></a>一：写作动机：</h1><p>1：当有新用户时用他的邻近朋友和社交朋友的历史签到记录去解决冷启动问题，当有新地点时，利用相邻位置的相似性进行推荐。</p>
+<p>2：地理上接近的用户可能有相似的兴趣，并且应该对签到行为有潜在的影响，为探究不同种类朋友的历史签到记录对用户的影响。</p>
+<h1 id="二：模型和方法："><a href="#二：模型和方法：" class="headerlink" title="二：模型和方法："></a>二：模型和方法：</h1><p>一：把朋友分成三类：</p>
+<p>社交朋友：与目标用户有在线社交联系</p>
+<p>地点朋友：与目标用户有共同的POI</p>
+<p>邻近（物理）朋友：目标用户的相邻朋友，因为它们与她的物理距离很短。            </p>
+<p><img src="/LA+RW/202241617106.bmp" alt="202241617106">            </p>
+<p>二：模型</p>
+<p>1：为了获得每个用户i的潜在位置，提出了两种方法，即线性聚合（Linear Aggregation（LA）））和随机步行（Random Walk（RW）），以估计该用户在每个位置j（他朋友签到过得POI）上的概率（相似性）。用户的签入分为观察到的签到、潜在的签到和其他未观察到的签到。</p>
+<p>1）：用户兴趣的相似性可以用方程中的余弦相似度来衡量。</p>
+<p>2：提出了两个损失函数来建模这三种签到：基于平方误差的损失函数（the square error based loss function：基于增强平方误差的矩阵因式分解(ASMF)模型）和基于排序误差的损失函数（the ranking error based loss function：基于增强排序误差的矩阵分解(ARMF)模型）</p>
+<p>三：考虑因素</p>
+<p>1：纳入地理影响：一个用户在很远的POI签到的可能性很小，尽管她对此感兴趣。</p>
+<p>2：推荐类别：</p>
+<p>1）：传统推荐类似，考虑推荐现有用户现有地点。 在从训练数据中学习模型后，我们预测用户选择每个未访问地点的可能性，形成top-K。</p>
+<p>2）：对新用户的推荐，考虑推荐他们现有的位置。 首先，需要通过利用他们的社交朋友和邻近朋友的历史签入来重新训练这些新用户的模型。 作为新用户冷启动推荐</p>
+<p>3：POI类别：用户经常习惯于访问那些属于同一类别的POI，因为他们的特定爱好。类别偏好是影响用户对新POI决策的另一个重要因素</p>
+<p>四：实验</p>
+<p>两种方法来学习每个用户的潜在位置(即LA、RW)，设计了两个损失函数：ASMF和ARMF。 两两组合组合：分别表示为ASMF-LA、ASMF-RW、ARMF-LA、ARMF-RW。</p>
+<h1 id="三：总结："><a href="#三：总结：" class="headerlink" title="三：总结："></a>三：总结：</h1><p>提出了一个两步的POI推荐问题框架，它考虑了三种类型的朋友，即社交朋友，地点朋友，和邻近的朋友。 具体来说，在第一步中，设计了两种方法来了解用户朋友以前签到过的位置哪些她对此最感兴趣。 在第二步中，我们利用学习到的潜在位置，开发了基于<strong>矩阵因式分解</strong>的两种不同误差损失函数的模型。基于平方误差的损失将二元偏好扩展到观察到的签入、潜在签入和其他未观察到的签入的三元变量，而基于排序错误的损失模拟了用户对其访问位置、潜在位置和未访问位置的偏好排序。 最后，两个真实世界数据集的实验结果清楚地验证了对比基于不同验证度量的许多基线方法，此模型性能的提高。</p>
+<h1 id="文章的创新点："><a href="#文章的创新点：" class="headerlink" title="文章的创新点："></a><strong>文章的创新点：</strong></h1><p>1：使用两个签到数据集对用户与其三种类型的朋友之间的相关性进行了实证分析</p>
+<p>2：设计两种方法来为每个用户学习她的朋友以前已经签到过得，她最感兴趣的一组位置。</p>
+<p>3：利用学习到的潜在签到，通过不同的误差损失函数开发基于矩阵因式分解的模型，并相应地提出了两种可扩展的优化方法</p>
+<p>4：标准推荐、新位置推荐和新用户推荐设计了三种不同的推荐策略。</p>
+<h1 id="思考："><a href="#思考：" class="headerlink" title="思考："></a><strong>思考：</strong></h1><p>1：这篇论文用的是传统的方法：矩阵因式分解模型，虽然他并没有把内容、情感和时间的影响考虑进去，也没有向论文1中多层次的划分区域考虑用户的偏好，但是他把社会因素（朋友）进行了细化，着重提高了对于POI推荐影响也比较大的社会因素的效率。</p>
+<p>2：通过两个方法获得i有偏好的的潜在位置（即计算i和朋友f在地点j上的相似性），并且根据划分的朋友类别还考虑到了冷启动问题，这是一个很好的思维延伸，这也是我读过关于POI第一个与冷启动结合的论文，并且冷启动一是新用户推荐，二是新地点推荐。</p>
+<p>3：本篇论文属于基于CF的POI推荐类，目前正在把读过的论文进行归类，然后进行对比，提出新的想法。</p>
+
+            </div>
+        </article>
+    </div>
+    <br>
+    
+        <div class="next-prev-post">
+            
+                <div class="prev-post">
+                    <div class="prev gt-c-content-color-first">
+                        上一篇：<a href="/2021/02/01/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-POI%E7%BB%BC%E8%BF%B0/" 
+                            class="post-title gt-a-link">深度学习+POI综述</a>
+                    </div>
+                </div>
+            
+            
+                <div class="next-post">
+                    <div class="next gt-c-content-color-first">
+                        下一篇：<a href="/2020/12/28/PACE/" 
+                            class="post-title gt-a-link">PACE</a>
+                    </div>
+                </div>
+            
+        </div>
+    
+    
+
+    
+
+    
+</div>
+
+                <div class="site-footer gt-c-content-color-first">
+    <div class="footer-main">
+        <!-- 建议保留版权信息或者添加主题信息到友链，感谢您的理解 -->
+        <!-- 文件位置：layout/_includes/footer.ejs -->
+        <span style="text-align: right; float: right;">Theme <a 
+            href="https://github.com/renbaoshuo/hexo-theme-pure" target="_blank">Pure</a> | Powered by <a 
+            href="https://hexo.io" target="_blank">Hexo</a></span>
+        <span style="text-align: left;">Footer HTML
+</span>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </body>
+</html>

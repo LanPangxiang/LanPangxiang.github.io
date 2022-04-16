@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Title -->
-<title>PACE - Hexo</title>
+<title>TRAR - Hexo</title>
 
 <!-- Icon -->
 <link rel="icon" href="https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg">
@@ -85,29 +85,24 @@
                 <div class="post-container">
     <div class="post-detail gt-bg-theme-color-second gt-c-content-color-first">
         <article class="gt-post-content">
-            <h1 class="post-title">PACE</h1>
+            <h1 class="post-title">TRAR</h1>
             <div class="post-info">
                 <time class="post-time gt-c-content-color-first">
-                    · 2020-12-28 ·</time>
+                    · 2022-04-16 ·</time>
                 
                     
                 
             </div>
             <hr>
             <div class="post-content gt-c-content-color-first">
-                <h2 id="Bridging-Collaborative-Filtering-and-Semi-Supervised-Learning-A-Neural-Approach-for-POI-Recommendation"><a href="#Bridging-Collaborative-Filtering-and-Semi-Supervised-Learning-A-Neural-Approach-for-POI-Recommendation" class="headerlink" title="Bridging Collaborative Filtering and Semi-Supervised Learning: A Neural Approach for POI Recommendation"></a>Bridging Collaborative Filtering and Semi-Supervised Learning: A Neural Approach for POI Recommendation</h2><h1 id="一：写作动机："><a href="#一：写作动机：" class="headerlink" title="一：写作动机："></a>一：写作动机：</h1><p>1：有些算法只能在特定数据集特定的环境解决问题，换一个情景就不太适用了，虽然在POI推荐中CF中有很多复杂模型，但是对每种类型的上下文的建模是随机的，并且在不同的传入数据中不稳定。</p>
-<p>2：从显式评级中的（1-5）分数到单个签入，序数信息缺失，基于MF的算法在连续建模评级中的强大是无用的，POI推荐更多的是隐式反馈</p>
-<p>3：用户偏好在很大程度上是由许多复杂因素决定的，如地理，时间，分类，社交网络等，需要找一种能把这些复杂的因素都能考虑进去的方法</p>
-<h1 id="二：模型和方法："><a href="#二：模型和方法：" class="headerlink" title="二：模型和方法："></a>二：模型和方法：</h1><p><img src="/PACE/2022416165512.bmp" alt="2022416165512"></p>
-<p>1：用户和POI的输入为例，将每一对标记的嵌入层E送到一个完全连接的嵌入层E，这可以看作是对用户和POI进行潜在因素建模。</p>
-<p>2：用户&#x2F;POI嵌入连接到上下文层S，两个单独的上下文预测的训练，因此利用S中最大层(Softmax Layer)来保存用户和POI之间的上下文信息。 </p>
-<p>3：通过向量连接将用户和POI嵌入合并，并将它们送到多个前馈神经网络隐藏层的偏好层H，以深入建模用户和POI之间的交互。 </p>
-<p>4：顶部的最大层产生的偏好预测的训练被用来学习用户对POI的偏好。</p>
-<h1 id="三：总结："><a href="#三：总结：" class="headerlink" title="三：总结："></a>三：总结：</h1><p>1：开发了一种名为PACE的神经结构，用于将CF和SSL桥接到POI推荐。 </p>
-<p>2：一方面，利用表达神经网络来建模用户与POI之间的非线性复杂交互。 另一方面，利用上下文图并应用用户&#x2F;POI 缓和以解决数据稀缺和各种上下文信息。</p>
-<h1 id="文章的创新点："><a href="#文章的创新点：" class="headerlink" title="文章的创新点："></a><strong>文章的创新点：</strong></h1><p>1：开发了PACE（偏好和上下文嵌入），这是一种基于神经网络的CF和SSL的通用和原则性的组合，用于模拟用户对POI的偏好。</p>
-<p>2：密切研究PACE、MF和GLR之间的联系，以了解为什么PACE成功地解决了数据稀缺和各种背景的挑战。</p>
-<h1 id="思考："><a href="#思考：" class="headerlink" title="思考："></a><strong>思考：</strong></h1><p>目前还没有什么想法，一方面因为刚接触神经网络方法进行POI推荐，对机器学习方法了解还不是很深入，另一方面因为方法里面的公式看不太懂，还需要深钻一下，另外这个文章有代码，后续准备调试并看懂。</p>
+                <h2 id="Enhancing-Personalized-Trip-Recommendation-with-Attractive-Routes"><a href="#Enhancing-Personalized-Trip-Recommendation-with-Attractive-Routes" class="headerlink" title="Enhancing Personalized Trip Recommendation with Attractive Routes"></a><strong>Enhancing Personalized Trip Recommendation with Attractive Routes</strong></h2><h1 id="一：写作动机："><a href="#一：写作动机：" class="headerlink" title="一：写作动机："></a>一：写作动机：</h1><p>大多数现有的研究只根据POIS本身的流行程度来搜索POI。 事实上，POI之间的路线也有吸引游客的地方，其中一些路线很受欢迎。</p>
+<h1 id="二：模型和方法："><a href="#二：模型和方法：" class="headerlink" title="二：模型和方法："></a>二：模型和方法：</h1><p>TRAR：一个个性化的旅行推荐与POI和吸引力路线（AR）。 它根据POI的流行程度和基尼系数发现了吸引路线，然后利用类别空间中的a gravity model来估计吸引路线的评分和偏好，AR偏好由用户偏好的聚类中心来衡量。</p>
+<p>对于具有n个POI的区域，构造了一个以n个节点为POI的旅行图G(V，E)；这些n个节点在用户的时间约束下可以访问，考虑了POI的时间信息。根据用户的偏好分数选择top-k个POI。 由这些选定的POIs生成一个新的图作为G’(V’，E’)它是G的子图。</p>
+<p><img src="/TRAR/202241617106-16501104416241.bmp" alt="202241617106"></p>
+<h1 id="三：总结："><a href="#三：总结：" class="headerlink" title="三：总结："></a>三：总结：</h1><p>1：确定了一种新的路线称为吸引路线，并提出了一种新的方法，称为TRAR的个性化推荐旅行与AR。 TRAR根据POI的流行度和基尼系数发现了吸引人的路线，提出了在类别空间下的a gravity model来估计吸引路线的评分和偏好，通过估计用户是否会访问有吸引力的路线，最大限度地提高用户沿旅行的体验。</p>
+<p>2：在AR评估过程中，TRAR通过无监督学习获得每个AR的偏好。</p>
+<p>3：考虑到有吸引力的路线的个性化旅行推荐工作。 通过不同数据集的一系列实验，验证了TRAR的有效性，并表明TRAR在不同条件下表现良好。</p>
+<h1 id="思考："><a href="#思考：" class="headerlink" title="思考："></a><strong>思考：</strong></h1><p>本文的创新点都在总结中表述了，对于旅游路线推荐方面的POI应用，这篇论文确实有很大的可取之处，因为我的毕业论文的想法就是想把AI比赛的那个旅游路线做出来，当时的想法虽然考虑了地点流行度，个人偏好，时间等因素，但是对于路线方面是没有过多的考虑的，考虑的是所以旅游路线下来最后所用时间最短为目的，这篇比较好，它考虑的并不一定是时间最短就是好的，有的游客喜欢那些受欢迎的有吸引力的路线，在旅游时间不超过最大时间的范围内，其实这是一种增加用户旅游体验感的一种很好的方法，我觉得如果我准备做旅游路线推荐的话，这个是个很好的参考。</p>
 
             </div>
         </article>
@@ -116,18 +111,11 @@
     
         <div class="next-prev-post">
             
-                <div class="prev-post">
-                    <div class="prev gt-c-content-color-first">
-                        上一篇：<a href="/2021/01/12/LA+RW/" 
-                            class="post-title gt-a-link">LA+RW</a>
-                    </div>
-                </div>
-            
             
                 <div class="next-post">
                     <div class="next gt-c-content-color-first">
-                        下一篇：<a href="/2020/12/14/IEMF/" 
-                            class="post-title gt-a-link">IEMF</a>
+                        下一篇：<a href="/2021/02/01/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-POI%E7%BB%BC%E8%BF%B0/" 
+                            class="post-title gt-a-link">深度学习+POI综述</a>
                     </div>
                 </div>
             
