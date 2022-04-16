@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Title -->
-<title>lan-first - Hexo</title>
+<title>IEMF - Hexo</title>
 
 <!-- Icon -->
 <link rel="icon" href="https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg">
@@ -85,17 +85,31 @@
                 <div class="post-container">
     <div class="post-detail gt-bg-theme-color-second gt-c-content-color-first">
         <article class="gt-post-content">
-            <h1 class="post-title">lan-first</h1>
+            <h1 class="post-title">IEMF</h1>
             <div class="post-info">
                 <time class="post-time gt-c-content-color-first">
-                    · 2022-04-16 ·</time>
+                    · 2020-12-14 ·</time>
                 
                     
                 
             </div>
             <hr>
             <div class="post-content gt-c-content-color-first">
-                
+                <h2 id="Learning-User’s-Intrinsic-and-Extrinsic-Interests-for-Point-of-Interest-Recommendation-A-Unifified-Approach"><a href="#Learning-User’s-Intrinsic-and-Extrinsic-Interests-for-Point-of-Interest-Recommendation-A-Unifified-Approach" class="headerlink" title="Learning User’s Intrinsic and Extrinsic Interests for Point-of-Interest Recommendation: A Unifified Approach"></a>Learning User’s Intrinsic and Extrinsic Interests for Point-of-Interest Recommendation: A Unifified Approach</h2><h1 id="一：写作动机："><a href="#一：写作动机：" class="headerlink" title="一：写作动机："></a>一：写作动机：</h1><p>1：只有签入记录，很难解释是什么原因促使用户签入一个位置。 因此，建模用户的真实和可解释的兴趣成为一个棘手的问题。</p>
+<p>2：对未访问的POI的用户的低预测评级不能揭示该用户不喜欢该位置的原因，是因为她不喜欢还是因为外部环境的限制？ 大多数现有的方法都以同样的方式将用户所有未观察到的反馈视为负反馈，因此无法捕捉缺失数据的固有属性，即缺失的负值和正值的混合。</p>
+<p>3：人类行动能力的复杂性导致了的方法无法建模用户对POI的真正兴趣和解释她的决策过程</p>
+<h1 id="二：模型和方法："><a href="#二：模型和方法：" class="headerlink" title="二：模型和方法："></a>二：模型和方法：</h1><p>1：从两个方面对每个用户的一般兴趣进行建模：</p>
+<p>（1）：内在兴趣，即她为了自己固有的相似性而访问一个位置，而不受任何限制，在每个活动区域内，用户能够地理上访问每个位置；</p>
+<p>(2）：外在兴趣，其中她的签到决策过程受地理距离的影响。</p>
+<p>2：内在兴趣建模：在每个活动区域内，与那些未观察到的位置相比，一个用户对观察到的位置的内在兴趣在她的决策过程中起着重要的作用。</p>
+<p>3：外在兴趣建模：与用户活动区域之外那些未观察到的位置相比，她对观察到的位置的外在兴趣对她的签到决定的影响比她内在的更大。</p>
+<p>对缺失数据进行建模：一些未经访问的地点可能是那些用户感兴趣的，而另一些实际上是他们不喜欢的。 因此，每个用户对未观察到的位置的偏好是负值和错过的正值的混合：面向位置的方法自适应地学习缺失数据的潜在值</p>
+<p>4：利用Boostrap采样和替换算法求解优化问题的随机梯度下降（SGD）。</p>
+<h1 id="三：总结："><a href="#三：总结：" class="headerlink" title="三：总结："></a>三：总结：</h1><p>通过有效地学习细粒度和可解释的用户兴趣，并自适应地对缺失的数据进行建模，将平方误差损失和排序误差损失集成到解决位置推荐任务中。具体来说，每个用户的一般兴趣被建模为她的内在和外在兴趣的混合，在此基础上，我们在我们的统一方法中制定了排序约束。 此外，提出了一种自适应面向位置的方法来捕捉缺失数据的特征，并将其表述为统一优化目标中的平方误差损失。</p>
+<h1 id="文章的创新点："><a href="#文章的创新点：" class="headerlink" title="文章的创新点："></a><strong>文章的创新点：</strong></h1><p>1：以一种精确和可解释的方式来学习用户的兴趣，这是内在兴趣和外在兴趣的混合</p>
+<p>2：提出了一种面向位置的方法来自适应地建模丢失的数据，在此基础上计算了基于平方误差的损失。</p>
+<h1 id="思考："><a href="#思考：" class="headerlink" title="思考："></a><strong>思考：</strong></h1><p>最主要的收获是有了关于某个影响因素的处理方法，比如说把用户的兴趣分为内在兴趣和外在兴趣。由于考试，具体算法如何实现的思想还没有彻底搞懂，比如说Boostrap采样和替换算法等。</p>
+
             </div>
         </article>
     </div>
@@ -105,8 +119,8 @@
             
                 <div class="prev-post">
                     <div class="prev gt-c-content-color-first">
-                        上一篇：<a href="/2022/04/16/%E5%85%B0-second/" 
-                            class="post-title gt-a-link">兰-second</a>
+                        上一篇：<a href="/2020/12/28/PACE/" 
+                            class="post-title gt-a-link">PACE</a>
                     </div>
                 </div>
             

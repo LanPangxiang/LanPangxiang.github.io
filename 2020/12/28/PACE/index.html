@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Title -->
-<title>兰-second - Hexo</title>
+<title>PACE - Hexo</title>
 
 <!-- Icon -->
 <link rel="icon" href="https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg">
@@ -85,17 +85,29 @@
                 <div class="post-container">
     <div class="post-detail gt-bg-theme-color-second gt-c-content-color-first">
         <article class="gt-post-content">
-            <h1 class="post-title">兰-second</h1>
+            <h1 class="post-title">PACE</h1>
             <div class="post-info">
                 <time class="post-time gt-c-content-color-first">
-                    · 2022-04-16 ·</time>
+                    · 2020-12-28 ·</time>
                 
                     
                 
             </div>
             <hr>
             <div class="post-content gt-c-content-color-first">
-                <p>311彭于晏</p>
+                <h2 id="Bridging-Collaborative-Filtering-and-Semi-Supervised-Learning-A-Neural-Approach-for-POI-Recommendation"><a href="#Bridging-Collaborative-Filtering-and-Semi-Supervised-Learning-A-Neural-Approach-for-POI-Recommendation" class="headerlink" title="Bridging Collaborative Filtering and Semi-Supervised Learning: A Neural Approach for POI Recommendation"></a>Bridging Collaborative Filtering and Semi-Supervised Learning: A Neural Approach for POI Recommendation</h2><h1 id="一：写作动机："><a href="#一：写作动机：" class="headerlink" title="一：写作动机："></a>一：写作动机：</h1><p>1：有些算法只能在特定数据集特定的环境解决问题，换一个情景就不太适用了，虽然在POI推荐中CF中有很多复杂模型，但是对每种类型的上下文的建模是随机的，并且在不同的传入数据中不稳定。</p>
+<p>2：从显式评级中的（1-5）分数到单个签入，序数信息缺失，基于MF的算法在连续建模评级中的强大是无用的，POI推荐更多的是隐式反馈</p>
+<p>3：用户偏好在很大程度上是由许多复杂因素决定的，如地理，时间，分类，社交网络等，需要找一种能把这些复杂的因素都能考虑进去的方法</p>
+<h1 id="二：模型和方法："><a href="#二：模型和方法：" class="headerlink" title="二：模型和方法："></a>二：模型和方法：</h1><p><img src="/PACE/2022416165512.bmp" alt="2022416165512"></p>
+<p>1：用户和POI的输入为例，将每一对标记的嵌入层E送到一个完全连接的嵌入层E，这可以看作是对用户和POI进行潜在因素建模。</p>
+<p>2：用户&#x2F;POI嵌入连接到上下文层S，两个单独的上下文预测的训练，因此利用S中最大层(Softmax Layer)来保存用户和POI之间的上下文信息。 </p>
+<p>3：通过向量连接将用户和POI嵌入合并，并将它们送到多个前馈神经网络隐藏层的偏好层H，以深入建模用户和POI之间的交互。 </p>
+<p>4：顶部的最大层产生的偏好预测的训练被用来学习用户对POI的偏好。</p>
+<h1 id="三：总结："><a href="#三：总结：" class="headerlink" title="三：总结："></a>三：总结：</h1><p>1：开发了一种名为PACE的神经结构，用于将CF和SSL桥接到POI推荐。 </p>
+<p>2：一方面，利用表达神经网络来建模用户与POI之间的非线性复杂交互。 另一方面，利用上下文图并应用用户&#x2F;POI 缓和以解决数据稀缺和各种上下文信息。</p>
+<h1 id="文章的创新点："><a href="#文章的创新点：" class="headerlink" title="文章的创新点："></a><strong>文章的创新点：</strong></h1><p>1：开发了PACE（偏好和上下文嵌入），这是一种基于神经网络的CF和SSL的通用和原则性的组合，用于模拟用户对POI的偏好。</p>
+<p>2：密切研究PACE、MF和GLR之间的联系，以了解为什么PACE成功地解决了数据稀缺和各种背景的挑战。</p>
+<h1 id="思考："><a href="#思考：" class="headerlink" title="思考："></a><strong>思考：</strong></h1><p>目前还没有什么想法，一方面因为刚接触神经网络方法进行POI推荐，对机器学习方法了解还不是很深入，另一方面因为方法里面的公式看不太懂，还需要深钻一下，另外这个文章有代码，后续准备调试并看懂。</p>
 
             </div>
         </article>
@@ -107,8 +119,8 @@
             
                 <div class="next-post">
                     <div class="next gt-c-content-color-first">
-                        下一篇：<a href="/2022/04/16/lan-first/" 
-                            class="post-title gt-a-link">lan-first</a>
+                        下一篇：<a href="/2020/12/14/IEMF/" 
+                            class="post-title gt-a-link">IEMF</a>
                     </div>
                 </div>
             
