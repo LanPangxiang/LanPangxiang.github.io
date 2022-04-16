@@ -98,7 +98,7 @@
                 <h2 id="Enhancing-Personalized-Trip-Recommendation-with-Attractive-Routes"><a href="#Enhancing-Personalized-Trip-Recommendation-with-Attractive-Routes" class="headerlink" title="Enhancing Personalized Trip Recommendation with Attractive Routes"></a><strong>Enhancing Personalized Trip Recommendation with Attractive Routes</strong></h2><h1 id="一：写作动机："><a href="#一：写作动机：" class="headerlink" title="一：写作动机："></a>一：写作动机：</h1><p>大多数现有的研究只根据POIS本身的流行程度来搜索POI。 事实上，POI之间的路线也有吸引游客的地方，其中一些路线很受欢迎。</p>
 <h1 id="二：模型和方法："><a href="#二：模型和方法：" class="headerlink" title="二：模型和方法："></a>二：模型和方法：</h1><p>TRAR：一个个性化的旅行推荐与POI和吸引力路线（AR）。 它根据POI的流行程度和基尼系数发现了吸引路线，然后利用类别空间中的a gravity model来估计吸引路线的评分和偏好，AR偏好由用户偏好的聚类中心来衡量。</p>
 <p>对于具有n个POI的区域，构造了一个以n个节点为POI的旅行图G(V，E)；这些n个节点在用户的时间约束下可以访问，考虑了POI的时间信息。根据用户的偏好分数选择top-k个POI。 由这些选定的POIs生成一个新的图作为G’(V’，E’)它是G的子图。</p>
-<p><img src="/TRAR/202241617106-16501104416241.bmp" alt="202241617106"></p>
+<p><img src="/TRAR/202241617106-16501104416241.JPG" alt="202241617106"></p>
 <h1 id="三：总结："><a href="#三：总结：" class="headerlink" title="三：总结："></a>三：总结：</h1><p>1：确定了一种新的路线称为吸引路线，并提出了一种新的方法，称为TRAR的个性化推荐旅行与AR。 TRAR根据POI的流行度和基尼系数发现了吸引人的路线，提出了在类别空间下的a gravity model来估计吸引路线的评分和偏好，通过估计用户是否会访问有吸引力的路线，最大限度地提高用户沿旅行的体验。</p>
 <p>2：在AR评估过程中，TRAR通过无监督学习获得每个AR的偏好。</p>
 <p>3：考虑到有吸引力的路线的个性化旅行推荐工作。 通过不同数据集的一系列实验，验证了TRAR的有效性，并表明TRAR在不同条件下表现良好。</p>

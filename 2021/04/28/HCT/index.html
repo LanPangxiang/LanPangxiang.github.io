@@ -98,8 +98,8 @@
                 <h2 id="Modeling-hierarchical-category-transition-for-next-POI-recommendation-with-uncertain-check-ins"><a href="#Modeling-hierarchical-category-transition-for-next-POI-recommendation-with-uncertain-check-ins" class="headerlink" title="Modeling hierarchical category transition for next POI recommendation with uncertain check-ins"></a><strong>Modeling hierarchical category transition for next POI recommendation with uncertain check-ins</strong></h2><h1 id="一：写作动机："><a href="#一：写作动机：" class="headerlink" title="一：写作动机："></a>一：写作动机：</h1><p>1：被命名为集体POI的地方（例如购物中心）留下一些不确定的签入。 它表明，我们不能总是访问用户在集体POI上的精确签入，因此现有的方法无法很好地工作。</p>
 <p>2：不确定的签入加剧了冷启动问题，因为在用户的历史签入中无法观察到集体POI中的单个POI。</p>
 <p>3：类别层次结构(CHS)在解决冷启动问题方面是有效的，类别层次将有助于更好地捕捉POI（类别)和类别之间的关系，从低(叶)到高(根）级别，并说明低层的类别涵盖比上层更具体的概念。</p>
-<h1 id="二：模型和方法："><a href="#二：模型和方法：" class="headerlink" title="二：模型和方法："></a>二：模型和方法：</h1><p><img src="/GERec/2022416203210.bmp" alt="2022416203210"></p>
-<p><img src="/GERec/2022416203216.bmp" alt="2022416203216"></p>
+<h1 id="二：模型和方法："><a href="#二：模型和方法：" class="headerlink" title="二：模型和方法："></a>二：模型和方法：</h1><p><img src="/GERec/2022416203210.JPG" alt="2022416203210"></p>
+<p><img src="/GERec/2022416203216.JPG" alt="2022416203216"></p>
 <p>1.本文通过RLMS（Representation learning model based approaches.）而不是DLMS（Deep learning model based approaches.）或LFMS（Latent factor model based approaches.）对层次类别转换进行建模，因为RLMS在排序精度和计算成本之间实现了相对的平衡。</p>
 <p>2.在训练模块中，扩展了the Skip-gram以建模POI（类别）和类别之间的层次依赖关系，以及层次类别转换，从而学习了高质量下一个POI推荐更好的POI和类别表示。the Skip-gram (Word2Vc)模型起源于自然语言处理(NLP)域，这是一种通过捕获大量精确的语法和语义单词关系来学习高质量单词分布式向量表示的有效方法。</p>
 <p>3：用soft-max functions:预测Li在第一层(Clli)与其相关类别的概率依赖关系，以及在第j层(Clji)到第(J1)层(Clji1)的类别的概率依赖关系。</p>

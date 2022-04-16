@@ -97,8 +97,8 @@
             <div class="post-content gt-c-content-color-first">
                 <h2 id="Where-to-Go-Next-Modeling-Long-and-Short-Term-User-Preferences-for-Point-of-Interest-Recommendation"><a href="#Where-to-Go-Next-Modeling-Long-and-Short-Term-User-Preferences-for-Point-of-Interest-Recommendation" class="headerlink" title="Where to Go Next: Modeling Long- and Short-Term User Preferences for Point-of-Interest Recommendation"></a><strong>Where to Go Next: Modeling Long- and Short-Term User Preferences for Point-of-Interest Recommendation</strong></h2><h1 id="一：写作动机："><a href="#一：写作动机：" class="headerlink" title="一：写作动机："></a>一：写作动机：</h1><p>1：现有的基于RNN的方法，在建模用户的短期偏好时，要么忽略了用户的长期偏好，要么忽略了最近访问的POI之间的地理关系。</p>
 <p>2：RNN只能按照用户的签入序列建模连续的活动。</p>
-<h1 id="二：模型和方法："><a href="#二：模型和方法：" class="headerlink" title="二：模型和方法："></a>二：模型和方法：</h1><p><img src="/LSTPM/202241621957.bmp" alt="202241621957"></p>
-<p><img src="/LSTPM/202241621102.bmp" alt="202241621102">              </p>
+<h1 id="二：模型和方法："><a href="#二：模型和方法：" class="headerlink" title="二：模型和方法："></a>二：模型和方法：</h1><p><img src="/LSTPM/202241621957.JPG" alt="202241621957"></p>
+<p><img src="/LSTPM/202241621957.JPG" alt="202241621102">              </p>
 <p>模型没有很难的地方。         </p>
 <h1 id="三：总结："><a href="#三：总结：" class="headerlink" title="三：总结："></a>三：总结：</h1><p>实验结果表明，与最先进的方法相比，我们提出的方法大大提高了推荐精度。值得注意的是，虽然我们提出的方法优于所有基线，但我们意识到POI建议中的常见问题，即低召回率和NDCG分数。由于高稀疏性，数据是合理的。</p>
 <h1 id="文章的创新点："><a href="#文章的创新点：" class="headerlink" title="文章的创新点："></a><strong>文章的创新点：</strong></h1><p>开发了一个具有上下文感知能力的非局部网络来建模长期偏好，以及一个地理扩展的LSTM来建模短期偏好。（由一个用于长期偏好建模的非局部网络和一个用于短期偏好学习的地理扩展的RNN组成。）</p>
