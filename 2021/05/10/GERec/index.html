@@ -98,7 +98,7 @@
                 <h2 id="Relation-Embedding-for-Personalised-Translation-based-POI-Recommendation"><a href="#Relation-Embedding-for-Personalised-Translation-based-POI-Recommendation" class="headerlink" title="Relation Embedding for Personalised Translation-based POI Recommendation"></a><strong>Relation Embedding for Personalised Translation-based POI Recommendation</strong></h2><h1 id="一：写作动机："><a href="#一：写作动机：" class="headerlink" title="一：写作动机："></a>一：写作动机：</h1><p>1：User-POI矩阵的极度稀疏和不同种类的时空上下文给poi推荐带来了挑战。</p>
 <h1 id="二：模型和方法："><a href="#二：模型和方法：" class="headerlink" title="二：模型和方法："></a>二：模型和方法：</h1><p>1：用户-POI图嵌入</p>
 <p>通过图嵌入方法，为了克服来自时空上下文的挑战，GERec编码时间和空间信息，以及低维潜在空间中的用户动态签入活动。</p>
-<p><img src="/GERec/202241620539.JPG" alt="202241620539"></p>
+<p><img src="/GERec/202241620539.png" alt="202241620539"></p>
 <p>用三元组表示用户和poi以及其中的交互特征。定义了一个基于时空和基于语义的关系路径表示法，                       它由基于时间的关系路径<strong>r</strong>t、基于地理的关系路径<strong>r</strong>l和基于语义的关系路径<strong>r</strong>c组成。</p>
 <p>2：整合基于时空的MF和基于用户偏好的MF 与用图嵌入处理的user-poi矩阵</p>
 <h1 id="三：总结："><a href="#三：总结：" class="headerlink" title="三：总结："></a>三：总结：</h1><p>提了一种基于转化的POI推荐模型，可以有效地构建用户POI图并对边信息建模。为了解决时间推理和地理问题，提出了一种时空关系路径嵌入方法来对时间、空间和语义内容信息进行建模，以利用用户-POI交互数据来提高用户嵌入的学习能力。为了克服用户-POI交互数据的稀疏性，我们开发了一个嵌入函数来弥补基于翻译的嵌入模型和传统的基于MF的模型之间的差距。用户-POI图与融合的MF模型集成，以提高POI推荐的偏好。</p>
