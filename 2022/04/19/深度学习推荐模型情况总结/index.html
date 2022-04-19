@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Title -->
+<title>深度学习推荐模型情况总结 - 兰鹏翔的博客</title>
+
+<!-- Icon -->
+<link rel="icon" href="https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg">
+
+<!-- Fonts -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" as="style" onload="this.onload=null, this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"></noscript>
+
+
+
+<!-- Style -->
+
+<link rel="stylesheet" href="/styles/main.css">
+
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-pure@1.0.1/dist/main.css"> -->
+
+
+
+
+
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+
+    <meta name="generator" content="Hexo 6.1.0"></head>
+    <body>
+        <div class="main gt-bg-theme-color-first">
+            <div class="main-content">
+                <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="/">
+        <img class="user-avatar" src="https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            兰鹏翔的博客
+        </div>
+    </a>
+    <button aria-label="Navbar Toggler" class="navbar-toggler" type="button" id="changeNavbar">
+        <i class="gt-c-content-color-first" style="font-size: 18px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18px" fill="currentColor">
+                <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
+            </svg>
+        </i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center; ">
+            
+                <div class="nav-item">
+                    <a href="/" class="menu gt-a-link" target="_self">首页</a>
+                </div>
+            
+                <div class="nav-item">
+                    <a href="/archives/" class="menu gt-a-link" target="_self">归档</a>
+                </div>
+            
+                <div class="nav-item">
+                    <a href="/tags/" class="menu gt-a-link" target="_self">标签</a>
+                </div>
+            
+                <div class="nav-item">
+                    <a href="/friends/" class="menu gt-a-link" target="_self">友链</a>
+                </div>
+            
+        </div>
+    </div>
+</nav>
+
+<script>
+    /* 移动端导航栏展开/收起切换 */
+    document.getElementById('changeNavbar').onclick = function() {
+        let element = document.getElementById('navbarSupportedContent');
+        if (element.style.display === 'none' || element.style.display === '') {
+            element.style.display = 'block';
+        } else { 
+            element.style.display = 'none';
+        }
+    }
+</script>
+
+                <div class="post-container">
+    <div class="post-detail gt-bg-theme-color-second gt-c-content-color-first">
+        <article class="gt-post-content">
+            <h1 class="post-title">深度学习推荐模型情况总结</h1>
+            <div class="post-info">
+                <time class="post-time gt-c-content-color-first">
+                    · 2022-04-19 ·</time>
+                
+                    
+                
+            </div>
+            <hr>
+            <div class="post-content gt-c-content-color-first">
+                <h1 id="深度学习推荐模型情况总结"><a href="#深度学习推荐模型情况总结" class="headerlink" title="深度学习推荐模型情况总结"></a>深度学习推荐模型情况总结</h1><h4 id="1-AutoRec-自编码推荐"><a href="#1-AutoRec-自编码推荐" class="headerlink" title="1:AutoRec:自编码推荐"></a>1:AutoRec:自编码推荐</h4><p><strong>1.1 基本原理：</strong></p>
+<p>利用协同过滤中的共现矩阵，完成物品向量或者用户向量的自编码，利用自编码器的泛化能力进行推荐。</p>
+<p><strong>1.2 特点：</strong></p>
+<p>单隐层神经网络结构简单，可实现快速训练和部署。AutoRec是一个标准的三层神经网络，模型的训练利用梯度反向传播即可完成。</p>
+<p><strong>1.3优缺点：</strong></p>
+<p>①：基于物品的AutoRec（I-AutoRec）：输入的向量是物品的评分向量。</p>
+<p>②：基于用户的AutoRec（U-AutoRec）：仅需输入一次目标用户的用户向量，就可以重建用户对所有物品的评分向量。劣势是用户向量的稀疏性可能会影响模型效果。</p>
+<p><strong>缺点：</strong>模型结构太简单，存在一定的表达能力不足的问题。而且利用到的只有用户和物品的id特征向量，造成其他有价值的信息的浪费。</p>
+<h4 id="2：Deep-Crosing（深度特征交叉）："><a href="#2：Deep-Crosing（深度特征交叉）：" class="headerlink" title="2：Deep Crosing（深度特征交叉）："></a>2：Deep Crosing（深度特征交叉）：</h4><p><strong>2.1 基本原理：</strong></p>
+<p>①：Embedding层：将稀疏的类别特征转换成稠密的Embedding向量</p>
+<p>②：Stacking层（堆叠层）：把不同的Embedding特征和数值型特征拼接在一起，形成新的包含全部特征的特征向量</p>
+<p>③：Multiple Residual Units（多层残差网络）层：通过多层残差网络对特征向量各个维度进行充分的特征交叉组合，使其在表达能力上较传统机器学习模型大为增强。</p>
+<p>（为什么用残差网络？1：残差神经网络中，由于输入向量短路的存在，很多时候可以越过两层ReLU网络，减少过拟合现象的发生；2：残差网络使用ReLUD代替sigmoid激活函数，输入向量短路相当于直接把梯度毫无变化地传递到下一层，这也使残差网络的收敛速度更快）</p>
+<p>④：Scoring层：输出层，为了拟合优化目标而存在的。CTR二分类问题使用逻辑回归模型，图像多分类问题使用Softmax模型。</p>
+<p>利用“Embedding层+多隐层+输出层”的经典深度学习框架，预完成特征的自动深度交叉</p>
+<p><strong>2.2 特点：</strong></p>
+<p>经典的深度学习推荐模型</p>
+<p><strong>2.3 优缺点：</strong></p>
+<p>利用全连接隐层进行特征交叉，针对性不强。</p>
+<h4 id="3：NeuralCF模型-CF与深度学习的结合"><a href="#3：NeuralCF模型-CF与深度学习的结合" class="headerlink" title="3：NeuralCF模型-CF与深度学习的结合"></a>3：NeuralCF模型-CF与深度学习的结合</h4><p><strong>3.1 基本原理：</strong></p>
+<p>将传统的矩阵分解中用户向量和物品向量的点积操作，换成由神经网络代替的互操作。</p>
+<p>（为什么用神经网络代替？1让用户向量和物品向量做更充分的交叉，得到更多有价值的特征组合信息；2引入更多的非线性特征，让模型的表达能力更强）</p>
+<p>整合了原始NCF模型和以元素积为互操作的广义矩阵分解模型。</p>
+<p>（为什么互操作？使模型具有更强的特征组合和非线性能力）</p>
+<p><strong>3.2 特点：</strong></p>
+<p>表达能力加强版的矩阵分解模型</p>
+<p><strong>3.3 优缺点：</strong></p>
+<p>只使用了用户和物品的ID特征，没有加入其他更多的特征，互操作的种类并没有做进一步的探究和说明。</p>
+<h4 id="4：PNN（基于积操作的神经网络）：加强特征交叉能力"><a href="#4：PNN（基于积操作的神经网络）：加强特征交叉能力" class="headerlink" title="4：PNN（基于积操作的神经网络）：加强特征交叉能力"></a>4：PNN（基于积操作的神经网络）：加强特征交叉能力</h4><p><strong>4.1：基本原理：</strong></p>
+<p>针对不同特征域之间的交叉操作，定义“内积”、“外积”等多种操作。外积互操作后，把所有两两特征Embedding向量外积互操作的结果叠加，形成一个叠加外积互操作矩阵。</p>
+<p>所有特征Embedding向量都进行内积和外积操作</p>
+<p><strong>4.2：特点：</strong></p>
+<p>跟Deep Crosing相比，就是不同特征的Embedding向量不再是简单的拼接，而是用Product操作进行两两交互，更有针对性地获取特征之间的交叉信息。</p>
+<p><strong>4.3：优缺点：</strong></p>
+<p>对于简单地全连接进行无差别的处理，PNN定义的内积和外积操作更针对性地强调了不同特征之间的交互。但是只是无差别的交叉。</p>
+<h4 id="5：Wide-amp-Deep：记忆能力和泛化能力的综合"><a href="#5：Wide-amp-Deep：记忆能力和泛化能力的综合" class="headerlink" title="5：Wide&amp;Deep：记忆能力和泛化能力的综合"></a>5：Wide&amp;Deep：记忆能力和泛化能力的综合</h4><p><strong>5.1：基本原理</strong></p>
+<p>利用Wide部分加强模型的“记忆能力”，利用Deep部分加强模型的“泛化能力”。用逻辑回归模型输出层将Wide部分和Deep部分组合起来。</p>
+<p>Wide：善于处理大量稀疏的ID类特征，使用交叉积变换操作，特征同时为1，对应的交叉积变换层的结果才为1.</p>
+<p>Deep：ReLU全连接层</p>
+<p><strong>5.2: 特点：</strong></p>
+<p>开创了组合模型的构造方法，对深度学习推荐模型的后去发展产生重大影响</p>
+<p><strong>5.3：优缺点：</strong></p>
+<p>Wide部分需要人工特征组合的筛选</p>
+<h4 id="6：Deep-amp-Cross（DCN）"><a href="#6：Deep-amp-Cross（DCN）" class="headerlink" title="6：Deep&amp;Cross（DCN）"></a>6：Deep&amp;Cross（DCN）</h4><p><strong>6.1：基本原理</strong></p>
+<p>用Cross网络代替Wide&amp;Deep模型中的Wide部分</p>
+<p>Cross网络的目的是增加特征之间的交互能力，进行特征的自动化交叉</p>
+<p><strong>6.2：特点：</strong></p>
+<p>解决了Wide&amp;Deep模型人工组合特征的问题</p>
+<p><strong>6.3：优缺点：</strong></p>
+<p>Cross网络的复杂度较高</p>
+<p>7：FNN：基于因子分解机支持的神经网络</p>
+<p>7.1：基本原理：</p>
+
+            </div>
+        </article>
+    </div>
+    <br>
+    
+        <div class="next-prev-post">
+            
+            
+                <div class="next-post">
+                    <div class="next gt-c-content-color-first">
+                        下一篇：<a href="/2022/04/19/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E4%BC%A0%E7%BB%9F%E6%A8%A1%E5%9E%8B%E6%83%85%E5%86%B5%E6%80%BB%E7%BB%93/" 
+                            class="post-title gt-a-link">推荐系统传统模型情况总结</a>
+                    </div>
+                </div>
+            
+        </div>
+    
+    
+
+    
+
+    
+</div>
+
+                <div class="site-footer gt-c-content-color-first">
+    <div class="footer-main">
+        <!-- 建议保留版权信息或者添加主题信息到友链，感谢您的理解 -->
+        <!-- 文件位置：layout/_includes/footer.ejs -->
+        <span style="text-align: right; float: right;">Theme <a 
+            href="https://github.com/renbaoshuo/hexo-theme-pure" target="_blank">Pure</a> | Powered by <a 
+            href="https://hexo.io" target="_blank">Hexo</a></span>
+        <span style="text-align: left;">Footer HTML
+</span>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </body>
+</html>
