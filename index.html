@@ -7,318 +7,123 @@
   <meta name="author" content="Pengxiang Lan">
   <title>Pengxiang Lan | Academic Homepage</title>
   <style>
-    :root {
-      --bg: #ffffff;
-      --panel: #f7f9fc;
-      --text: #20242c;
-      --muted: #667085;
-      --line: #e6e9ef;
-      --accent: #3567c8;
-      --accent-soft: #eef4ff;
-      --shadow: 0 12px 35px rgba(28, 46, 78, 0.08);
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
-      line-height: 1.72;
-    }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .layout { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 280px 1fr; gap: 54px; padding: 54px 34px 80px; }
-    .sidebar { position: sticky; top: 36px; align-self: start; }
-    .avatar { width: 190px; height: 190px; border-radius: 50%; object-fit: cover; display: block; margin-bottom: 22px; box-shadow: var(--shadow); border: 5px solid #fff; }
-    .name { font-size: 30px; font-weight: 760; letter-spacing: -0.5px; margin: 0 0 4px; }
-    .cn-name { color: var(--muted); font-size: 16px; margin-bottom: 12px; }
-    .role { font-size: 15px; font-weight: 650; margin: 0 0 4px; }
-    .affil, .location { color: var(--muted); font-size: 14px; margin-bottom: 3px; }
-    .links { margin-top: 20px; display: grid; gap: 9px; }
-    .links a { color: var(--text); font-size: 14px; display: inline-flex; align-items: center; gap: 8px; }
-    .links a:hover { color: var(--accent); text-decoration: none; }
-    .nav { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); display: grid; gap: 8px; }
-    .nav a { color: var(--muted); font-size: 13px; font-weight: 650; }
-    .nav a:hover { color: var(--accent); text-decoration: none; }
-    main { min-width: 0; }
-    .hero { padding: 4px 0 10px; }
-    .hero p { font-size: 17px; margin: 0 0 14px; }
-    .research-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 8px; }
-    .tag { background: var(--accent-soft); border: 1px solid #dbe7ff; color: #315aab; font-size: 12px; font-weight: 650; padding: 6px 10px; border-radius: 999px; }
-    section { margin-top: 42px; }
-    h2 { font-size: 25px; margin: 0 0 18px; padding-bottom: 10px; border-bottom: 1px solid var(--line); letter-spacing: -0.25px; }
-    h3 { font-size: 17px; margin: 22px 0 8px; }
-    .news { list-style: none; padding: 0; margin: 0; }
-    .news li { display: grid; grid-template-columns: 86px 1fr; gap: 14px; padding: 7px 0; }
-    .date { color: var(--muted); font-size: 13px; font-weight: 650; white-space: nowrap; }
-    .pub-card { display: grid; grid-template-columns: 150px 1fr; gap: 22px; padding: 20px 0; border-bottom: 1px solid var(--line); }
-    .pub-card:last-child { border-bottom: none; }
-    .pub-mark { min-height: 120px; border-radius: 10px; background: linear-gradient(135deg,#eef4ff,#e2eaff); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 12px; }
-    .pub-mark.green { background: linear-gradient(135deg,#edf8f3,#dff1e7); }
-    .pub-mark.purple { background: linear-gradient(135deg,#f3f1ff,#e7e2ff); }
-    .pub-mark.orange { background: linear-gradient(135deg,#fff4e9,#ffe5ce); }
-    .pub-mark.rose { background: linear-gradient(135deg,#f9f0f5,#f2dfe9); }
-    .venue { font-size: 11px; font-weight: 800; color: #4b5f84; margin-bottom: 6px; }
-    .abbr { font-size: 27px; font-weight: 800; letter-spacing: 0.5px; }
-    .pub-title { font-size: 17px; font-weight: 760; line-height: 1.45; margin-bottom: 5px; }
-    .authors, .pub-meta, .pub-desc { font-size: 13.5px; color: var(--muted); margin-top: 5px; }
-    .pub-meta { color: #4d5563; font-style: italic; }
-    .pub-links { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; }
-    .pub-links a { font-size: 12px; font-weight: 700; border: 1px solid #d7deea; padding: 4px 8px; border-radius: 6px; background: #fff; }
-    .pub-links a:hover { text-decoration: none; border-color: #adc2eb; background: #f7faff; }
-    .compact-pub { margin: 0; padding-left: 20px; }
-    .compact-pub li { margin-bottom: 14px; }
-    .timeline { display: grid; gap: 16px; }
-    .timeline-item { display: grid; grid-template-columns: 118px 1fr; gap: 18px; }
-    .timeline-date { color: var(--muted); font-size: 13px; font-weight: 650; }
-    .timeline-title { font-weight: 720; }
-    .timeline-sub { color: var(--muted); font-size: 13.5px; }
-    .project { padding: 16px 18px; border: 1px solid var(--line); border-radius: 10px; margin-bottom: 14px; background: #fcfdff; }
-    .project-title { font-weight: 760; margin-bottom: 3px; }
-    .project-meta { color: var(--muted); font-size: 13px; margin-bottom: 7px; }
-    .project p { margin: 0; font-size: 14px; }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-    .mini-card { padding: 16px 18px; border: 1px solid var(--line); border-radius: 10px; background: #fcfdff; }
-    .mini-card h3 { margin-top: 0; }
-    .mini-card ul { margin: 0; padding-left: 20px; }
-    .mini-card li { margin-bottom: 7px; font-size: 14px; }
-    footer { margin-top: 54px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
-    @media (max-width: 860px) {
-      .layout { grid-template-columns: 1fr; gap: 20px; padding: 30px 22px 60px; }
-      .sidebar { position: static; }
-      .avatar { width: 150px; height: 150px; }
-      .nav { display: flex; flex-wrap: wrap; gap: 12px 18px; }
-      .pub-card { grid-template-columns: 118px 1fr; }
-      .two-col { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 560px) {
-      .pub-card { grid-template-columns: 1fr; }
-      .pub-mark { min-height: 92px; }
-      .news li, .timeline-item { grid-template-columns: 1fr; gap: 2px; }
-      h2 { font-size: 22px; }
-    }
+    :root{--bg:#fff;--panel:#f7f9fc;--text:#20242c;--muted:#667085;--line:#e6e9ef;--accent:#3567c8;--accent-soft:#eef4ff;--shadow:0 12px 35px rgba(28,46,78,.08)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.72}
+    a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+    .layout{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:280px 1fr;gap:54px;padding:54px 34px 80px}.sidebar{position:sticky;top:36px;align-self:start}.avatar{width:190px;height:190px;border-radius:50%;object-fit:cover;display:block;margin-bottom:22px;box-shadow:var(--shadow);border:5px solid #fff}.name{font-size:30px;font-weight:760;letter-spacing:-.5px;margin:0 0 4px}.cn-name{color:var(--muted);font-size:16px;margin-bottom:12px}.role{font-size:15px;font-weight:650;margin:0 0 4px}.affil,.location{color:var(--muted);font-size:14px;margin-bottom:3px}
+    .links{margin-top:20px;display:grid;gap:9px}.links a{color:var(--text);font-size:14px;display:inline-flex;align-items:center;gap:8px}.links a:hover{color:var(--accent);text-decoration:none}.nav{margin-top:28px;padding-top:20px;border-top:1px solid var(--line);display:grid;gap:8px}.nav a{color:var(--muted);font-size:13px;font-weight:650}.nav a:hover{color:var(--accent);text-decoration:none}
+    main{min-width:0}.hero{padding:4px 0 10px}.hero p{font-size:17px;margin:0 0 14px}.research-tags{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 8px}.tag{background:var(--accent-soft);border:1px solid #dbe7ff;color:#315aab;font-size:12px;font-weight:650;padding:6px 10px;border-radius:999px}
+    section{margin-top:42px}h2{font-size:25px;margin:0 0 18px;padding-bottom:10px;border-bottom:1px solid var(--line);letter-spacing:-.25px}h3{font-size:18px;margin:26px 0 12px}.section-note{color:var(--muted);font-size:13px;margin:-8px 0 14px}.news{list-style:none;padding:0;margin:0}.news li{display:grid;grid-template-columns:86px 1fr;gap:14px;padding:7px 0}.date{color:var(--muted);font-size:13px;font-weight:650;white-space:nowrap}
+    .pub-card{display:grid;grid-template-columns:150px 1fr;gap:22px;padding:20px 0;border-bottom:1px solid var(--line)}.pub-mark{min-height:120px;border-radius:10px;background:linear-gradient(135deg,#eef4ff,#e2eaff);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:12px}.pub-mark.green{background:linear-gradient(135deg,#edf8f3,#dff1e7)}.pub-mark.purple{background:linear-gradient(135deg,#f3f1ff,#e7e2ff)}.pub-mark.orange{background:linear-gradient(135deg,#fff4e9,#ffe5ce)}.pub-mark.rose{background:linear-gradient(135deg,#f9f0f5,#f2dfe9)}.venue{font-size:11px;font-weight:800;color:#4b5f84;margin-bottom:6px}.abbr{font-size:27px;font-weight:800;letter-spacing:.5px}.pub-title{font-size:17px;font-weight:760;line-height:1.45;margin-bottom:5px}.authors,.pub-meta,.pub-desc{font-size:13.5px;color:var(--muted);margin-top:5px}.pub-meta{color:#4d5563;font-style:italic}.pub-links{margin-top:8px;display:flex;flex-wrap:wrap;gap:8px}.pub-links a{font-size:12px;font-weight:700;border:1px solid #d7deea;padding:4px 8px;border-radius:6px;background:#fff}.pub-links a:hover{text-decoration:none;border-color:#adc2eb;background:#f7faff}
+    .year{margin-top:24px;font-size:16px;font-weight:800;color:#344054}.full-pubs{list-style:none;padding:0;margin:8px 0 0}.full-pubs li{padding:10px 0 12px;border-bottom:1px dashed #e7eaf0;font-size:14px}.full-pubs li:last-child{border-bottom:none}.pub-venue{display:inline-block;font-size:11px;font-weight:800;color:#315aab;background:#eef4ff;border:1px solid #dbe7ff;border-radius:5px;padding:1px 6px;margin-right:5px}.small-links{white-space:nowrap}.small-links a{font-size:12px;font-weight:650}.compact-pub{margin:0;padding-left:20px}.compact-pub li{margin-bottom:14px}
+    .timeline{display:grid;gap:16px}.timeline-item{display:grid;grid-template-columns:118px 1fr;gap:18px}.timeline-date{color:var(--muted);font-size:13px;font-weight:650}.timeline-title{font-weight:720}.timeline-sub{color:var(--muted);font-size:13.5px}.project{padding:16px 18px;border:1px solid var(--line);border-radius:10px;margin-bottom:14px;background:#fcfdff}.project-title{font-weight:760;margin-bottom:3px}.project-meta{color:var(--muted);font-size:13px;margin-bottom:7px}.project p{margin:0;font-size:14px}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px}.mini-card{padding:16px 18px;border:1px solid var(--line);border-radius:10px;background:#fcfdff}.mini-card h3{margin-top:0}.mini-card ul{margin:0;padding-left:20px}.mini-card li{margin-bottom:7px;font-size:14px}footer{margin-top:54px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+    @media(max-width:860px){.layout{grid-template-columns:1fr;gap:20px;padding:30px 22px 60px}.sidebar{position:static}.avatar{width:150px;height:150px}.nav{display:flex;flex-wrap:wrap;gap:12px 18px}.pub-card{grid-template-columns:118px 1fr}.two-col{grid-template-columns:1fr}}
+    @media(max-width:560px){.pub-card{grid-template-columns:1fr}.pub-mark{min-height:92px}.news li,.timeline-item{grid-template-columns:1fr;gap:2px}h2{font-size:22px}}
   </style>
 </head>
 <body>
-  <div class="layout">
-    <aside class="sidebar">
-      <img class="avatar" src="https://avatars.githubusercontent.com/u/73155178?v=4" alt="Pengxiang Lan">
-      <h1 class="name">Pengxiang Lan</h1>
-      <div class="cn-name">兰鹏翔</div>
-      <div class="role">Ph.D. Student in Computer Technology</div>
-      <div class="affil">Northeastern University</div>
-      <div class="location">Shenyang, China</div>
+<div class="layout">
+  <aside class="sidebar">
+    <img class="avatar" src="https://avatars.githubusercontent.com/u/73155178?v=4" alt="Pengxiang Lan">
+    <h1 class="name">Pengxiang Lan</h1><div class="cn-name">兰鹏翔</div>
+    <div class="role">Ph.D. Student in Computer Technology</div><div class="affil">Northeastern University</div><div class="location">Shenyang, China</div>
+    <div class="links">
+      <a href="mailto:pengxianglan@stumail.neu.edu.cn">✉ Email</a>
+      <a href="https://scholar.google.com.hk/citations?user=ULw0mF0AAAAJ&hl=zh-CN" target="_blank" rel="noopener">🎓 Google Scholar</a>
+      <a href="https://dblp.org/pid/329/5834.html" target="_blank" rel="noopener">📚 DBLP</a>
+      <a href="https://github.com/LanPangxiang" target="_blank" rel="noopener">💻 GitHub</a>
+      <a href="/archives/">🗂 Blog Archive</a>
+    </div>
+    <nav class="nav"><a href="#about">About</a><a href="#news">News</a><a href="#publications">Publications</a><a href="#education">Education</a><a href="#projects">Projects</a><a href="#patents">Patents</a><a href="#service">Service</a><a href="#honors">Honors</a></nav>
+  </aside>
 
-      <div class="links">
-        <a href="mailto:pengxianglan@stumail.neu.edu.cn">✉ Email</a>
-        <a href="https://scholar.google.com/citations?user=ULw0mF0AAAAJ" target="_blank" rel="noopener">🎓 Google Scholar</a>
-        <a href="https://dblp.org/pid/329/5834.html" target="_blank" rel="noopener">📚 DBLP</a>
-        <a href="https://github.com/LanPangxiang" target="_blank" rel="noopener">💻 GitHub</a>
-        <a href="/archives/">🗂 Blog Archive</a>
-      </div>
+  <main>
+    <section class="hero" id="about">
+      <p>Hello! I am <strong>Pengxiang Lan (兰鹏翔)</strong>, a Ph.D. student at the <strong>School of Computer Science and Engineering, Northeastern University</strong>. I am advised by <strong>Prof. Hai Zhao</strong> and <strong>Prof. Guibing Guo</strong>.</p>
+      <p>My research lies at the intersection of <strong>recommender systems, large language models, and spatio-temporal intelligence</strong>. I focus on next POI / next location recommendation, parameter-efficient fine-tuning, knowledge editing, generative recommendation, and test-time adaptation.</p>
+      <p>My work has appeared in <strong>SIGIR, ACL, AAAI, NAACL, WWW, PAKDD, DASFAA, ICWS</strong>, <strong>Expert Systems with Applications</strong>, <strong>Intelligent Data Analysis</strong>, and the <strong>Journal of Intelligent & Fuzzy Systems</strong>. For the latest citation counts and publication versions, please see my <a href="https://scholar.google.com.hk/citations?user=ULw0mF0AAAAJ&hl=zh-CN" target="_blank" rel="noopener"><strong>Google Scholar profile</strong></a>.</p>
+      <div class="research-tags"><span class="tag">Next POI Recommendation</span><span class="tag">LLMs for Recommendation</span><span class="tag">PEFT</span><span class="tag">Knowledge Editing</span><span class="tag">Generative Recommendation</span><span class="tag">Test-Time Adaptation</span></div>
+    </section>
 
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#news">News</a>
-        <a href="#publications">Publications</a>
-        <a href="#education">Education</a>
-        <a href="#projects">Projects</a>
-        <a href="#service">Service</a>
-        <a href="#honors">Honors</a>
-      </nav>
-    </aside>
+    <section id="news"><h2>🔥 News</h2><ul class="news">
+      <li><span class="date">2026.07</span><span>🎉 <strong>MPDC</strong> was published at <strong>SIGIR 2026</strong> as an <strong>Oral / Full Paper</strong>.</span></li>
+      <li><span class="date">2026.07</span><span>🎉 <strong>LaMDA</strong> was published in <strong>Findings of ACL 2026</strong>.</span></li>
+      <li><span class="date">2026.02</span><span>🎉 Our work on <strong>LLM-driven location completion and test-time training</strong> was accepted by <strong>Expert Systems with Applications</strong>.</span></li>
+      <li><span class="date">2026.02</span><span>🏅 Our patent on <strong>LLM-driven multi-perspective POI completion</strong> was granted.</span></li>
+      <li><span class="date">2025.11</span><span>🏅 Our patent on <strong>multi-factor expected location preference modeling</strong> was granted.</span></li>
+      <li><span class="date">2025</span><span>🎉 <strong>EPT</strong> and <strong>LAMP</strong> were published at <strong>AAAI 2025</strong> and <strong>NAACL 2025</strong>, respectively, both as Oral papers.</span></li>
+      <li><span class="date">2025</span><span>🎉 Our works on lifelong knowledge editing and OOD recommendation were published at <strong>ACL 2025</strong> and <strong>WWW 2025</strong>.</span></li>
+      <li><span class="date">2025–26</span><span>🏆 Awarded <strong>Outstanding Graduate Student of Northeastern University</strong>.</span></li>
+    </ul></section>
 
-    <main>
-      <section class="hero" id="about">
-        <p>Hello! I am <strong>Pengxiang Lan (兰鹏翔)</strong>, a Ph.D. student at the <strong>School of Computer Science and Engineering, Northeastern University</strong>. I am advised by <strong>Prof. Hai Zhao</strong> and <strong>Prof. Guibing Guo</strong>.</p>
-        <p>My research lies at the intersection of <strong>recommender systems, large language models, and spatio-temporal intelligence</strong>. I focus on next POI / next location recommendation, parameter-efficient fine-tuning, knowledge editing, generative recommendation, and test-time adaptation. My recent work explores how LLMs and generative models can better understand user mobility, recover incomplete behavioral signals, and model dynamic preferences under distribution shifts.</p>
-        <p>My work has appeared in <strong>SIGIR, ACL, AAAI, NAACL, WWW, DASFAA, ICWS</strong>, and <strong>Expert Systems with Applications (ESWA)</strong>.</p>
-        <div class="research-tags">
-          <span class="tag">Next POI Recommendation</span>
-          <span class="tag">LLMs for Recommendation</span>
-          <span class="tag">PEFT</span>
-          <span class="tag">Knowledge Editing</span>
-          <span class="tag">Generative Recommendation</span>
-          <span class="tag">Test-Time Adaptation</span>
-        </div>
-      </section>
+    <section id="publications">
+      <h2>📝 Publications</h2>
+      <p class="section-note">Selected first-author works are highlighted below. The full list is deduplicated by formal publication version; arXiv/preprint records are linked rather than counted as separate publications.</p>
 
-      <section id="news">
-        <h2>🔥 News</h2>
-        <ul class="news">
-          <li><span class="date">2026.07</span><span>🎉 <strong>MPDC</strong> was published at <strong>SIGIR 2026</strong> as an <strong>Oral / Full Paper</strong>.</span></li>
-          <li><span class="date">2026.07</span><span>🎉 <strong>LaMDA</strong> was published in <strong>Findings of ACL 2026</strong>.</span></li>
-          <li><span class="date">2026.02</span><span>🎉 Our work on <strong>LLM-driven location completion and test-time training</strong> was accepted by <strong>ESWA</strong>.</span></li>
-          <li><span class="date">2026.02</span><span>🏅 Our patent on <strong>LLM-driven multi-perspective POI completion</strong> was granted.</span></li>
-          <li><span class="date">2025.11</span><span>🏅 Our patent on <strong>multi-factor expected location preference modeling</strong> was granted.</span></li>
-          <li><span class="date">2025</span><span>🎉 <strong>EPT</strong> and <strong>LAMP</strong> were published at <strong>AAAI 2025</strong> and <strong>NAACL 2025</strong>, respectively, both as Oral papers.</span></li>
-          <li><span class="date">2025</span><span>🎉 Our works on lifelong knowledge editing and OOD recommendation were published at <strong>ACL 2025</strong> and <strong>WWW 2025</strong>.</span></li>
-          <li><span class="date">2025–26</span><span>🏆 Awarded <strong>Outstanding Graduate Student of Northeastern University</strong>.</span></li>
-        </ul>
-      </section>
+      <h3>Selected Publications</h3>
+      <article class="pub-card"><div class="pub-mark"><div class="venue">SIGIR 2026 · ORAL</div><div class="abbr">MPDC</div></div><div><div class="pub-title">Multi-Perspective Driven Expected Location Preferences for Next POI Recommendations</div><div class="authors"><strong>Pengxiang Lan</strong>, Enneng Yang, Yuliang Liang, Jianzhe Zhao, Guibing Guo, Hai Zhao</div><div class="pub-meta">SIGIR 2026, 869–880.</div><div class="pub-links"><a href="https://doi.org/10.1145/3805712.3809685" target="_blank" rel="noopener">DOI</a><a href="https://sigir2026.org/en-AU/pages/program/accepted-papers" target="_blank" rel="noopener">Program</a><a href="https://github.com/LanPangxiang/LaMDA2026" target="_blank" rel="noopener">Code</a></div><div class="pub-desc">Models authentic mobility preferences from behavioral and spatial perspectives and infers latent expected location preferences through diffusion-based contrastive learning.</div></div></article>
 
-      <section id="publications">
-        <h2>📝 Selected Publications</h2>
+      <article class="pub-card"><div class="pub-mark purple"><div class="venue">ACL FINDINGS 2026</div><div class="abbr">LaMDA</div></div><div><div class="pub-title">LLM-Driven Multi-Perspective Location Completion for Next Location Prediction</div><div class="authors"><strong>Pengxiang Lan</strong>, Enneng Yang, Yuliang Liang, Jianzhe Zhao, Linying Jiang, Guibing Guo</div><div class="pub-meta">Findings of ACL 2026, 5406–5428.</div><div class="pub-links"><a href="https://aclanthology.org/2026.findings-acl.267/" target="_blank" rel="noopener">Paper</a><a href="https://aclanthology.org/2026.findings-acl.267.pdf" target="_blank" rel="noopener">PDF</a><a href="https://doi.org/10.18653/v1/2026.findings-acl.267" target="_blank" rel="noopener">DOI</a><a href="https://github.com/LanPangxiang/LaMDA2026" target="_blank" rel="noopener">Code</a></div><div class="pub-desc">Introduces dual LLM agents for micro- and macro-level mobility completion with textual geographic descriptions, real-world candidate pools, and self-verification.</div></div></article>
 
-        <article class="pub-card">
-          <div class="pub-mark"><div class="venue">SIGIR 2026 · ORAL</div><div class="abbr">MPDC</div></div>
-          <div>
-            <div class="pub-title">Multi-Perspective Driven Expected Location Preferences for Next POI Recommendations</div>
-            <div class="authors"><strong>Pengxiang Lan</strong>, Enneng Yang, Yuliang Liang, Jianzhe Zhao, Guibing Guo, Hai Zhao</div>
-            <div class="pub-meta">The 49th International ACM SIGIR Conference on Research and Development in Information Retrieval, 869–880.</div>
-            <div class="pub-links">
-              <a href="https://doi.org/10.1145/3805712.3809685" target="_blank" rel="noopener">DOI</a>
-              <a href="https://sigir2026.org/en-AU/pages/program/accepted-papers" target="_blank" rel="noopener">Program</a>
-              <a href="https://github.com/LanPangxiang/LaMDA2026" target="_blank" rel="noopener">Code</a>
-            </div>
-            <div class="pub-desc">Models authentic mobility preferences from behavioral and spatial perspectives and infers latent expected location preferences through diffusion-based contrastive learning.</div>
-          </div>
-        </article>
+      <article class="pub-card"><div class="pub-mark green"><div class="venue">ESWA 2026</div><div class="abbr">LCT³</div></div><div><div class="pub-title">LLM-Driven Location Completion and Test-Time Training for Next Location Prediction</div><div class="authors"><strong>Pengxiang Lan</strong>, Enneng Yang, Yuliang Liang, Jianzhe Zhao, Guibing Guo, Hai Zhao</div><div class="pub-meta">Expert Systems with Applications, 2026.</div><div class="pub-desc">Extends LLM-based location completion with collaborative test-time training to improve robustness under incomplete check-in records and distribution shifts.</div></div></article>
 
-        <article class="pub-card">
-          <div class="pub-mark purple"><div class="venue">ACL FINDINGS 2026</div><div class="abbr">LaMDA</div></div>
-          <div>
-            <div class="pub-title">LLM-Driven Multi-Perspective Location Completion for Next Location Prediction</div>
-            <div class="authors"><strong>Pengxiang Lan</strong>, Enneng Yang, Yuliang Liang, Jianzhe Zhao, Linying Jiang, Guibing Guo</div>
-            <div class="pub-meta">Findings of the Association for Computational Linguistics: ACL 2026, 5406–5428.</div>
-            <div class="pub-links">
-              <a href="https://aclanthology.org/2026.findings-acl.267/" target="_blank" rel="noopener">Paper</a>
-              <a href="https://aclanthology.org/2026.findings-acl.267.pdf" target="_blank" rel="noopener">PDF</a>
-              <a href="https://doi.org/10.18653/v1/2026.findings-acl.267" target="_blank" rel="noopener">DOI</a>
-              <a href="https://github.com/LanPangxiang/LaMDA2026" target="_blank" rel="noopener">Code</a>
-            </div>
-            <div class="pub-desc">Introduces dual LLM agents for micro- and macro-level mobility completion, with textual geographic descriptions, real-world candidate pools, and self-verification.</div>
-          </div>
-        </article>
+      <article class="pub-card"><div class="pub-mark orange"><div class="venue">AAAI 2025 · ORAL</div><div class="abbr">EPT</div></div><div><div class="pub-title">EPT: Efficient Prompt Tuning by Multi-Space Projection and Prompt Fusion</div><div class="authors"><strong>Pengxiang Lan</strong>, Enneng Yang, Yuting Liu, Guibing Guo, Jianzhe Zhao, Xingwei Wang</div><div class="pub-meta">AAAI 2025, 24366–24374.</div><div class="pub-links"><a href="https://ojs.aaai.org/index.php/AAAI/article/view/34614" target="_blank" rel="noopener">Paper</a><a href="https://doi.org/10.1609/aaai.v39i23.34614" target="_blank" rel="noopener">DOI</a><a href="https://arxiv.org/abs/2405.11464" target="_blank" rel="noopener">arXiv</a></div><div class="pub-desc">Improves prompt tuning efficiency and task adaptability through low-rank prompt decomposition, multi-space projection, and adaptive prompt fusion.</div></div></article>
 
-        <article class="pub-card">
-          <div class="pub-mark green"><div class="venue">ESWA 2026</div><div class="abbr">LCT³</div></div>
-          <div>
-            <div class="pub-title">LLM-Driven Location Completion and Test-Time Training for Next Location Prediction</div>
-            <div class="authors"><strong>Pengxiang Lan</strong>, Enneng Yang, Yuliang Liang, Jianzhe Zhao, Guibing Guo, Hai Zhao</div>
-            <div class="pub-meta">Expert Systems with Applications, 2026.</div>
-            <div class="pub-desc">Extends LLM-based location completion with collaborative test-time training to improve robustness under incomplete check-in records and distribution shifts.</div>
-          </div>
-        </article>
+      <article class="pub-card"><div class="pub-mark rose"><div class="venue">NAACL 2025 · ORAL</div><div class="abbr">LAMP</div></div><div><div class="pub-title">Efficient and Effective Prompt Tuning via Prompt Decomposition and Compressed Outer Product</div><div class="authors"><strong>Pengxiang Lan</strong>*, Haoyu Xu*, Enneng Yang, Yuliang Liang, Guibing Guo, Jianzhe Zhao, Xingwei Wang</div><div class="pub-meta">NAACL 2025, 4406–4421. * Equal contribution.</div><div class="pub-links"><a href="https://aclanthology.org/2025.naacl-long.225/" target="_blank" rel="noopener">Paper</a><a href="https://aclanthology.org/2025.naacl-long.225.pdf" target="_blank" rel="noopener">PDF</a><a href="https://doi.org/10.18653/v1/2025.naacl-long.225" target="_blank" rel="noopener">DOI</a><a href="https://arxiv.org/abs/2502.12200" target="_blank" rel="noopener">arXiv</a></div><div class="pub-desc">Reduces prompt-tuning parameters through truncated-SVD prompt decomposition while strengthening token interactions with compressed outer products.</div></div></article>
 
-        <article class="pub-card">
-          <div class="pub-mark orange"><div class="venue">AAAI 2025 · ORAL</div><div class="abbr">EPT</div></div>
-          <div>
-            <div class="pub-title">EPT: Efficient Prompt Tuning by Multi-Space Projection and Prompt Fusion</div>
-            <div class="authors"><strong>Pengxiang Lan</strong>, Enneng Yang, Yuting Liu, Guibing Guo, Jianzhe Zhao, Xingwei Wang</div>
-            <div class="pub-meta">AAAI Conference on Artificial Intelligence, 24366–24374.</div>
-            <div class="pub-links">
-              <a href="https://ojs.aaai.org/index.php/AAAI/article/view/34614" target="_blank" rel="noopener">Paper</a>
-              <a href="https://ojs.aaai.org/index.php/AAAI/article/download/34614/36769" target="_blank" rel="noopener">PDF</a>
-              <a href="https://doi.org/10.1609/aaai.v39i23.34614" target="_blank" rel="noopener">DOI</a>
-              <a href="https://arxiv.org/abs/2405.11464" target="_blank" rel="noopener">arXiv</a>
-            </div>
-            <div class="pub-desc">Improves prompt tuning efficiency and task adaptability through low-rank prompt decomposition, multi-space projection, and adaptive prompt fusion.</div>
-          </div>
-        </article>
+      <h3>Full Publication List</h3>
+      <div class="year">2026</div><ul class="full-pubs">
+        <li><span class="pub-venue">SIGIR 2026</span><strong>Multi-Perspective Driven Expected Location Preferences for Next POI Recommendations.</strong> <strong>Pengxiang Lan</strong>, Enneng Yang, Yuliang Liang, Jianzhe Zhao, Guibing Guo, Hai Zhao. 869–880. <span class="small-links"><a href="https://doi.org/10.1145/3805712.3809685" target="_blank" rel="noopener">DOI</a> · <a href="https://github.com/LanPangxiang/LaMDA2026" target="_blank" rel="noopener">Code</a></span></li>
+        <li><span class="pub-venue">Findings ACL 2026</span><strong>LLM-Driven Multi-Perspective Location Completion for Next Location Prediction.</strong> <strong>Pengxiang Lan</strong>, Enneng Yang, Yuliang Liang, Jianzhe Zhao, Linying Jiang, Guibing Guo. 5406–5428. <span class="small-links"><a href="https://aclanthology.org/2026.findings-acl.267/" target="_blank" rel="noopener">Paper</a> · <a href="https://doi.org/10.18653/v1/2026.findings-acl.267" target="_blank" rel="noopener">DOI</a></span></li>
+        <li><span class="pub-venue">ESWA 2026</span><strong>LLM-Driven Location Completion and Test-Time Training for Next Location Prediction.</strong> <strong>Pengxiang Lan</strong>, Enneng Yang, Yuliang Liang, Jianzhe Zhao, Guibing Guo, Hai Zhao. <em>Expert Systems with Applications</em>.</li>
+      </ul>
 
-        <article class="pub-card">
-          <div class="pub-mark rose"><div class="venue">NAACL 2025 · ORAL</div><div class="abbr">LAMP</div></div>
-          <div>
-            <div class="pub-title">Efficient and Effective Prompt Tuning via Prompt Decomposition and Compressed Outer Product</div>
-            <div class="authors"><strong>Pengxiang Lan</strong>, Haoyu Xu, Enneng Yang, Yuliang Liang, Guibing Guo, Jianzhe Zhao, Xingwei Wang</div>
-            <div class="pub-meta">NAACL 2025, 4406–4421.</div>
-            <div class="pub-links">
-              <a href="https://aclanthology.org/2025.naacl-long.225/" target="_blank" rel="noopener">Paper</a>
-              <a href="https://aclanthology.org/2025.naacl-long.225.pdf" target="_blank" rel="noopener">PDF</a>
-              <a href="https://doi.org/10.18653/v1/2025.naacl-long.225" target="_blank" rel="noopener">DOI</a>
-              <a href="https://arxiv.org/abs/2502.12200" target="_blank" rel="noopener">arXiv</a>
-            </div>
-            <div class="pub-desc">Reduces prompt tuning parameters through truncated-SVD prompt decomposition while strengthening interactions among prompt tokens with compressed outer products.</div>
-          </div>
-        </article>
+      <div class="year">2025</div><ul class="full-pubs">
+        <li><span class="pub-venue">AAAI 2025</span><strong>EPT: Efficient Prompt Tuning by Multi-Space Projection and Prompt Fusion.</strong> <strong>Pengxiang Lan</strong>, Enneng Yang, Yuting Liu, Guibing Guo, Jianzhe Zhao, Xingwei Wang. 24366–24374. <span class="small-links"><a href="https://ojs.aaai.org/index.php/AAAI/article/view/34614" target="_blank" rel="noopener">Paper</a> · <a href="https://doi.org/10.1609/aaai.v39i23.34614" target="_blank" rel="noopener">DOI</a></span></li>
+        <li><span class="pub-venue">ACL 2025</span><strong>Knowledge Decoupling via Orthogonal Projection for Lifelong Editing of Large Language Models.</strong> Haoyu Xu, <strong>Pengxiang Lan</strong>, Enneng Yang, Guibing Guo, Jianzhe Zhao, Linying Jiang, Xingwei Wang. 13194–13213. <span class="small-links"><a href="https://aclanthology.org/2025.acl-long.646/" target="_blank" rel="noopener">Paper</a> · <a href="https://doi.org/10.18653/v1/2025.acl-long.646" target="_blank" rel="noopener">DOI</a></span></li>
+        <li><span class="pub-venue">NAACL 2025</span><strong>Efficient and Effective Prompt Tuning via Prompt Decomposition and Compressed Outer Product.</strong> <strong>Pengxiang Lan</strong>*, Haoyu Xu*, Enneng Yang, Yuliang Liang, Guibing Guo, Jianzhe Zhao, Xingwei Wang. 4406–4421. <span class="small-links"><a href="https://aclanthology.org/2025.naacl-long.225/" target="_blank" rel="noopener">Paper</a> · <a href="https://doi.org/10.18653/v1/2025.naacl-long.225" target="_blank" rel="noopener">DOI</a></span></li>
+        <li><span class="pub-venue">WWW 2025</span><strong>Graph Representation Learning via Causal Diffusion for Out-of-Distribution Recommendation.</strong> Chu Zhao, Enneng Yang, Yuliang Liang, <strong>Pengxiang Lan</strong>, Yuting Liu, Jianzhe Zhao, Guibing Guo, Xingwei Wang. 334–346. <span class="small-links"><a href="https://doi.org/10.1145/3696410.3714849" target="_blank" rel="noopener">DOI</a> · <a href="https://arxiv.org/abs/2408.00490" target="_blank" rel="noopener">arXiv</a> · <a href="https://github.com/user683/CausalDiffRec" target="_blank" rel="noopener">Code</a></span></li>
+      </ul>
 
-        <h3>Other Publications</h3>
-        <ul class="compact-pub">
-          <li><strong>[ACL 2025]</strong> <strong>Knowledge Decoupling via Orthogonal Projection for Lifelong Editing of Large Language Models.</strong> Haoyu Xu, <strong>Pengxiang Lan</strong>, Enneng Yang, Guibing Guo, Jianzhe Zhao, Linying Jiang, Xingwei Wang. <a href="https://aclanthology.org/2025.acl-long.646/" target="_blank" rel="noopener">Paper</a> · <a href="https://doi.org/10.18653/v1/2025.acl-long.646" target="_blank" rel="noopener">DOI</a></li>
-          <li><strong>[WWW 2025]</strong> <strong>Graph Representation Learning via Causal Diffusion for Out-of-Distribution Recommendation.</strong> Chu Zhao, Enneng Yang, Yuliang Liang, <strong>Pengxiang Lan</strong>, Yuting Liu, Jianzhe Zhao, Guibing Guo, Xingwei Wang. <a href="https://doi.org/10.1145/3696410.3714849" target="_blank" rel="noopener">DOI</a> · <a href="https://arxiv.org/abs/2408.00490" target="_blank" rel="noopener">arXiv</a> · <a href="https://github.com/user683/CausalDiffRec" target="_blank" rel="noopener">Code</a></li>
-          <li><strong>[DASFAA 2023 · Oral]</strong> <strong>Spatio-Temporal Position-Extended and Gated-Deep Network for Next POI Recommendation.</strong> <strong>Pengxiang Lan</strong>, Yihao Zhang, Haoran Xiang, Yuhao Wang, Wei Zhou. <a href="https://doi.org/10.1007/978-3-031-30672-3_34" target="_blank" rel="noopener">DOI</a></li>
-          <li><strong>[ICWS 2022 · Oral]</strong> <strong>Spatio-Temporal Mogrifier LSTM and Attention Network for Next POI Recommendation.</strong> Yihao Zhang, <strong>Pengxiang Lan</strong>, Yuhao Wang, Haoran Xiang. <a href="https://doi.org/10.1109/ICWS55610.2022.00019" target="_blank" rel="noopener">DOI</a></li>
-        </ul>
-      </section>
+      <div class="year">2024</div><ul class="full-pubs">
+        <li><span class="pub-venue">PAKDD 2024</span><strong>Residual Spatio-Temporal Collaborative Networks for Next POI Recommendation.</strong> Yonghao Huang, <strong>Pengxiang Lan</strong>, Xiaokang Li, Yihao Zhang, Kaibei Li. 144–155. <span class="small-links"><a href="https://doi.org/10.1007/978-981-97-2262-4_12" target="_blank" rel="noopener">DOI</a></span></li>
+        <li><span class="pub-venue">IDA 2024</span><strong>Conversational Recommender Based on Graph Sparsification and Multi-Hop Attention.</strong> Yihao Zhang, Yuhao Wang, Wei Zhou, <strong>Pengxiang Lan</strong>, Haoran Xiang, Junlin Zhu, Meng Yuan. <em>Intelligent Data Analysis</em> 28(1): 99–119. <span class="small-links"><a href="https://doi.org/10.3233/IDA-230148" target="_blank" rel="noopener">DOI</a></span></li>
+        <li><span class="pub-venue">JIFS 2024</span><strong>Conversational Recommender Based on Additive Attention and Positional Encoding.</strong> Yihao Zhang, Yuhao Wang, <strong>Pengxiang Lan</strong>, Haoran Xiang, Junlin Zhu, Meng Yuan. <em>Journal of Intelligent & Fuzzy Systems</em> 46(3): 6491–6503. <span class="small-links"><a href="https://doi.org/10.3233/JIFS-230905" target="_blank" rel="noopener">DOI</a></span></li>
+      </ul>
 
-      <section id="education">
-        <h2>📖 Education</h2>
-        <div class="timeline">
-          <div class="timeline-item"><div class="timeline-date">2023.09 – Present</div><div><div class="timeline-title">Ph.D. in Computer Technology · Northeastern University</div><div class="timeline-sub">School of Computer Science and Engineering · Advisors: Prof. Hai Zhao and Prof. Guibing Guo</div></div></div>
-          <div class="timeline-item"><div class="timeline-date">2020.09 – 2023.07</div><div><div class="timeline-title">M.S. in Computer Application Technology · Chongqing University of Technology</div><div class="timeline-sub">Liangjiang Artificial Intelligence College · Advisor: Assoc. Prof. Yihao Zhang</div></div></div>
-          <div class="timeline-item"><div class="timeline-date">2016.09 – 2020.07</div><div><div class="timeline-title">B.E. in Software Engineering · Hefei Normal University</div><div class="timeline-sub">School of Computer Science</div></div></div>
-        </div>
-      </section>
+      <div class="year">2023</div><ul class="full-pubs"><li><span class="pub-venue">DASFAA 2023</span><strong>Spatio-Temporal Position-Extended and Gated-Deep Network for Next POI Recommendation.</strong> <strong>Pengxiang Lan</strong>, Yihao Zhang, Haoran Xiang, Yuhao Wang, Wei Zhou. 505–520. <span class="small-links"><a href="https://doi.org/10.1007/978-3-031-30672-3_34" target="_blank" rel="noopener">DOI</a></span></li></ul>
+      <div class="year">2022</div><ul class="full-pubs"><li><span class="pub-venue">ICWS 2022</span><strong>Spatio-Temporal Mogrifier LSTM and Attention Network for Next POI Recommendation.</strong> Yihao Zhang, <strong>Pengxiang Lan</strong>, Yuhao Wang, Haoran Xiang. 17–26. <span class="small-links"><a href="https://doi.org/10.1109/ICWS55610.2022.00019" target="_blank" rel="noopener">DOI</a></span></li></ul>
+    </section>
 
-      <section id="projects">
-        <h2>🚀 Research & Project Experience</h2>
-        <div class="project">
-          <div class="project-title">Personalized and Efficient Fine-Tuning for On-Device Large Language Models</div>
-          <div class="project-meta">Project Lead · 2024.07 – 2025.07</div>
-          <p>Led the overall technical roadmap and R&D execution for efficient personalization of on-device LLMs. Designed parameter-efficient prompt tuning combining model quantization and truncated SVD, developed LLM-based heterogeneous user-data modeling, and explored robust federated learning with client filtering and adaptive differential privacy.</p>
-        </div>
-        <div class="project">
-          <div class="project-title">Multi-Context Next POI Recommendation</div>
-          <div class="project-meta">Project Lead · 2021.05 – 2022.04</div>
-          <p>Led next-POI recommendation modeling with multi-source spatio-temporal context, combining Mogrifier LSTM, multi-head self-attention, location-salient and time-weighting mechanisms, and geographic non-local modeling for dynamic preference learning.</p>
-        </div>
-        <div class="project">
-          <div class="project-title">Recommendation Algorithm Internship · NetEase Cloud Music</div>
-          <div class="project-meta">Hangzhou · 2022.05 – 2022.07</div>
-          <p>Worked as a recommendation algorithm intern on industrial recommendation tasks.</p>
-        </div>
-      </section>
+    <section id="education"><h2>📖 Education</h2><div class="timeline">
+      <div class="timeline-item"><div class="timeline-date">2023.09 – Present</div><div><div class="timeline-title">Ph.D. in Computer Technology · Northeastern University</div><div class="timeline-sub">School of Computer Science and Engineering · Advisors: Prof. Hai Zhao and Prof. Guibing Guo</div></div></div>
+      <div class="timeline-item"><div class="timeline-date">2020.09 – 2023.07</div><div><div class="timeline-title">M.S. in Computer Application Technology · Chongqing University of Technology</div><div class="timeline-sub">Liangjiang Artificial Intelligence College · Advisor: Assoc. Prof. Yihao Zhang</div></div></div>
+      <div class="timeline-item"><div class="timeline-date">2016.09 – 2020.07</div><div><div class="timeline-title">B.E. in Software Engineering · Hefei Normal University</div><div class="timeline-sub">School of Computer Science</div></div></div>
+    </div></section>
 
-      <section id="patents">
-        <h2>📜 Patents</h2>
-        <ul class="compact-pub">
-          <li><strong>Pengxiang Lan</strong>, Guibing Guo. LLM-driven multi-perspective POI completion method and system. Granted patent <strong>CN121278193B</strong>, Feb. 10, 2026.</li>
-          <li><strong>Pengxiang Lan</strong>, Guibing Guo. Multi-factor-driven expected location preference modeling for POI recommendation. Granted patent <strong>CN120632180B</strong>, Nov. 4, 2025.</li>
-          <li>Yihao Zhang, <strong>Pengxiang Lan</strong>. Next POI recommendation method based on improved LSTM and location jumping. Granted patent <strong>CN114896481B</strong>, Nov. 26, 2024.</li>
-        </ul>
-      </section>
+    <section id="projects"><h2>🚀 Research & Project Experience</h2>
+      <div class="project"><div class="project-title">Personalized and Efficient Fine-Tuning for On-Device Large Language Models</div><div class="project-meta">Project Lead · 2024.07 – 2025.07</div><p>Led the overall technical roadmap and R&D execution for efficient personalization of on-device LLMs. Designed parameter-efficient prompt tuning combining model quantization and truncated SVD, developed LLM-based heterogeneous user-data modeling, and explored robust federated learning with client filtering and adaptive differential privacy.</p></div>
+      <div class="project"><div class="project-title">Multi-Context Next POI Recommendation</div><div class="project-meta">Project Lead · 2021.05 – 2022.04</div><p>Led next-POI recommendation modeling with multi-source spatio-temporal context, combining Mogrifier LSTM, multi-head self-attention, location-salient and time-weighting mechanisms, and geographic non-local modeling for dynamic preference learning.</p></div>
+      <div class="project"><div class="project-title">Recommendation Algorithm Internship · NetEase Cloud Music</div><div class="project-meta">Hangzhou · 2022.05 – 2022.07</div><p>Worked as a recommendation algorithm intern on industrial recommendation tasks.</p></div>
+    </section>
 
-      <section id="service">
-        <h2>💻 Academic Service</h2>
-        <div class="two-col">
-          <div class="mini-card">
-            <h3>Conference Reviewer</h3>
-            <ul>
-              <li>NeurIPS 2026</li>
-              <li>SIGIR 2026, SIGIR 2025</li>
-              <li>AAAI 2026</li>
-              <li>ACL 2026</li>
-              <li>ECAI 2025</li>
-            </ul>
-          </div>
-          <div class="mini-card">
-            <h3>Journal Reviewer</h3>
-            <ul>
-              <li>IEEE Transactions on Computational Social Systems (TCSS), 2026</li>
-              <li>ACM Transactions on Knowledge Discovery from Data (TKDD), 2026</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+    <section id="patents"><h2>📜 Patents</h2><ul class="compact-pub">
+      <li><strong>Pengxiang Lan</strong>, Guibing Guo. LLM-driven multi-perspective POI completion method and system. Granted patent <strong>CN121278193B</strong>, Feb. 10, 2026.</li>
+      <li><strong>Pengxiang Lan</strong>, Guibing Guo. Multi-factor-driven expected location preference modeling for POI recommendation. Granted patent <strong>CN120632180B</strong>, Nov. 4, 2025.</li>
+      <li>Yihao Zhang, <strong>Pengxiang Lan</strong>. Next POI recommendation method based on improved LSTM and location jumping. Granted patent <strong>CN114896481B</strong>, Nov. 26, 2024.</li>
+    </ul></section>
 
-      <section id="honors">
-        <h2>🎖 Honors & Awards</h2>
-        <ul class="compact-pub">
-          <li><strong>2025–2026</strong> · Outstanding Graduate Student, Northeastern University</li>
-          <li><strong>2022–2023</strong> · Outstanding Graduate Student, Chongqing University of Technology</li>
-          <li><strong>2021–2022</strong> · First-Class Academic Scholarship, Chongqing University of Technology</li>
-          <li><strong>2019–2020</strong> · Outstanding Graduate of Anhui Province</li>
-          <li><strong>2018–2019</strong> · National Encouragement Scholarship</li>
-          <li><strong>2016–2017</strong> · National Encouragement Scholarship</li>
-        </ul>
-      </section>
+    <section id="service"><h2>💻 Academic Service</h2><div class="two-col">
+      <div class="mini-card"><h3>Conference Reviewer</h3><ul><li>NeurIPS 2026</li><li>SIGIR 2026, SIGIR 2025</li><li>AAAI 2026</li><li>ACL 2026</li><li>ECAI 2025</li></ul></div>
+      <div class="mini-card"><h3>Journal Reviewer</h3><ul><li>IEEE Transactions on Computational Social Systems (TCSS), 2026</li><li>ACM Transactions on Knowledge Discovery from Data (TKDD), 2026</li></ul></div>
+    </div></section>
 
-      <footer>
-        Last updated: August 2026 · Historical blog posts remain available through <a href="/archives/">Blog Archive</a>.
-      </footer>
-    </main>
-  </div>
+    <section id="honors"><h2>🎖 Honors & Awards</h2><ul class="compact-pub">
+      <li><strong>2025–2026</strong> · Outstanding Graduate Student, Northeastern University</li><li><strong>2022–2023</strong> · Outstanding Graduate Student, Chongqing University of Technology</li><li><strong>2021–2022</strong> · First-Class Academic Scholarship, Chongqing University of Technology</li><li><strong>2019–2020</strong> · Outstanding Graduate of Anhui Province</li><li><strong>2018–2019</strong> · National Encouragement Scholarship</li><li><strong>2016–2017</strong> · National Encouragement Scholarship</li>
+    </ul></section>
+
+    <footer>Last updated: August 2026 · Publication list synchronized against the author's scholarly profiles and formal publisher records · Historical blog posts remain available through <a href="/archives/">Blog Archive</a>.</footer>
+  </main>
+</div>
 </body>
 </html>
