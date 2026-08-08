@@ -1,323 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- Title -->
-<title>兰鹏翔的博客</title>
-
-<!-- Icon -->
-<link rel="icon" href="https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg">
-
-<!-- Fonts -->
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" as="style" onload="this.onload=null, this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"></noscript>
-
-
-
-<!-- Style -->
-
-<link rel="stylesheet" href="/styles/main.css">
-
-<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-pure@1.0.1/dist/main.css"> -->
-
-
-
-
-
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-
-
-    <meta name="generator" content="Hexo 6.1.0"></head>
-    <body>
-        <div class="main gt-bg-theme-color-first">
-            <div class="main-content">
-                <nav class="navbar navbar-expand-lg">
-    <a class="navbar-brand" href="/">
-        <img class="user-avatar" src="https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg" alt="头像">
-        <div class="site-name gt-c-content-color-first">
-            兰鹏翔的博客
-        </div>
-    </a>
-    <button aria-label="Navbar Toggler" class="navbar-toggler" type="button" id="changeNavbar">
-        <i class="gt-c-content-color-first" style="font-size: 18px;">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18px" fill="currentColor">
-                <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
-            </svg>
-        </i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="navbar-nav mr-auto" style="text-align: center; ">
-            
-                <div class="nav-item">
-                    <a href="/" class="menu gt-a-link" target="_self">首页</a>
-                </div>
-            
-                <div class="nav-item">
-                    <a href="/archives/" class="menu gt-a-link" target="_self">归档</a>
-                </div>
-            
-                <div class="nav-item">
-                    <a href="/tags/" class="menu gt-a-link" target="_self">标签</a>
-                </div>
-            
-                <div class="nav-item">
-                    <a href="/friends/" class="menu gt-a-link" target="_self">友链</a>
-                </div>
-            
-        </div>
-    </div>
-</nav>
-
-<script>
-    /* 移动端导航栏展开/收起切换 */
-    document.getElementById('changeNavbar').onclick = function() {
-        let element = document.getElementById('navbarSupportedContent');
-        if (element.style.display === 'none' || element.style.display === '') {
-            element.style.display = 'block';
-        } else { 
-            element.style.display = 'none';
-        }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pengxiang Lan — Ph.D. student at Northeastern University. Research on recommender systems, large language models, spatio-temporal intelligence, parameter-efficient fine-tuning, and knowledge editing.">
+  <meta name="author" content="Pengxiang Lan">
+  <title>Pengxiang Lan | Academic Homepage</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --panel: #f7f9fc;
+      --text: #20242c;
+      --muted: #667085;
+      --line: #e6e9ef;
+      --accent: #3567c8;
+      --accent-soft: #eef4ff;
+      --shadow: 0 12px 35px rgba(28, 46, 78, 0.08);
     }
-</script>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.72;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .layout { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 280px 1fr; gap: 54px; padding: 54px 34px 80px; }
+    .sidebar { position: sticky; top: 36px; align-self: start; }
+    .avatar { width: 190px; height: 190px; border-radius: 50%; object-fit: cover; display: block; margin-bottom: 22px; box-shadow: var(--shadow); border: 5px solid #fff; }
+    .name { font-size: 30px; font-weight: 760; letter-spacing: -0.5px; margin: 0 0 4px; }
+    .cn-name { color: var(--muted); font-size: 16px; margin-bottom: 12px; }
+    .role { font-size: 15px; font-weight: 650; margin: 0 0 4px; }
+    .affil, .location { color: var(--muted); font-size: 14px; margin-bottom: 3px; }
+    .links { margin-top: 20px; display: grid; gap: 9px; }
+    .links a { color: var(--text); font-size: 14px; display: inline-flex; align-items: center; gap: 8px; }
+    .links a:hover { color: var(--accent); text-decoration: none; }
+    .nav { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); display: grid; gap: 8px; }
+    .nav a { color: var(--muted); font-size: 13px; font-weight: 650; }
+    .nav a:hover { color: var(--accent); text-decoration: none; }
+    main { min-width: 0; }
+    .hero { padding: 4px 0 10px; }
+    .hero p { font-size: 17px; margin: 0 0 14px; }
+    .research-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 8px; }
+    .tag { background: var(--accent-soft); border: 1px solid #dbe7ff; color: #315aab; font-size: 12px; font-weight: 650; padding: 6px 10px; border-radius: 999px; }
+    section { margin-top: 42px; }
+    h2 { font-size: 25px; margin: 0 0 18px; padding-bottom: 10px; border-bottom: 1px solid var(--line); letter-spacing: -0.25px; }
+    h3 { font-size: 17px; margin: 22px 0 8px; }
+    .news { list-style: none; padding: 0; margin: 0; }
+    .news li { display: grid; grid-template-columns: 86px 1fr; gap: 14px; padding: 7px 0; }
+    .date { color: var(--muted); font-size: 13px; font-weight: 650; white-space: nowrap; }
+    .pub-card { display: grid; grid-template-columns: 150px 1fr; gap: 22px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+    .pub-card:last-child { border-bottom: none; }
+    .pub-mark { min-height: 120px; border-radius: 10px; background: linear-gradient(135deg,#eef4ff,#e2eaff); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 12px; }
+    .pub-mark.green { background: linear-gradient(135deg,#edf8f3,#dff1e7); }
+    .pub-mark.purple { background: linear-gradient(135deg,#f3f1ff,#e7e2ff); }
+    .pub-mark.orange { background: linear-gradient(135deg,#fff4e9,#ffe5ce); }
+    .pub-mark.rose { background: linear-gradient(135deg,#f9f0f5,#f2dfe9); }
+    .venue { font-size: 11px; font-weight: 800; color: #4b5f84; margin-bottom: 6px; }
+    .abbr { font-size: 27px; font-weight: 800; letter-spacing: 0.5px; }
+    .pub-title { font-size: 17px; font-weight: 760; line-height: 1.45; margin-bottom: 5px; }
+    .authors, .pub-meta, .pub-desc { font-size: 13.5px; color: var(--muted); margin-top: 5px; }
+    .pub-meta { color: #4d5563; font-style: italic; }
+    .pub-links { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .pub-links a { font-size: 12px; font-weight: 700; border: 1px solid #d7deea; padding: 4px 8px; border-radius: 6px; background: #fff; }
+    .pub-links a:hover { text-decoration: none; border-color: #adc2eb; background: #f7faff; }
+    .compact-pub { margin: 0; padding-left: 20px; }
+    .compact-pub li { margin-bottom: 14px; }
+    .timeline { display: grid; gap: 16px; }
+    .timeline-item { display: grid; grid-template-columns: 118px 1fr; gap: 18px; }
+    .timeline-date { color: var(--muted); font-size: 13px; font-weight: 650; }
+    .timeline-title { font-weight: 720; }
+    .timeline-sub { color: var(--muted); font-size: 13.5px; }
+    .project { padding: 16px 18px; border: 1px solid var(--line); border-radius: 10px; margin-bottom: 14px; background: #fcfdff; }
+    .project-title { font-weight: 760; margin-bottom: 3px; }
+    .project-meta { color: var(--muted); font-size: 13px; margin-bottom: 7px; }
+    .project p { margin: 0; font-size: 14px; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .mini-card { padding: 16px 18px; border: 1px solid var(--line); border-radius: 10px; background: #fcfdff; }
+    .mini-card h3 { margin-top: 0; }
+    .mini-card ul { margin: 0; padding-left: 20px; }
+    .mini-card li { margin-bottom: 7px; font-size: 14px; }
+    footer { margin-top: 54px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+    @media (max-width: 860px) {
+      .layout { grid-template-columns: 1fr; gap: 20px; padding: 30px 22px 60px; }
+      .sidebar { position: static; }
+      .avatar { width: 150px; height: 150px; }
+      .nav { display: flex; flex-wrap: wrap; gap: 12px 18px; }
+      .pub-card { grid-template-columns: 118px 1fr; }
+      .two-col { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .pub-card { grid-template-columns: 1fr; }
+      .pub-mark { min-height: 92px; }
+      .news li, .timeline-item { grid-template-columns: 1fr; gap: 2px; }
+      h2 { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <img class="avatar" src="https://avatars.githubusercontent.com/u/73155178?v=4" alt="Pengxiang Lan">
+      <h1 class="name">Pengxiang Lan</h1>
+      <div class="cn-name">兰鹏翔</div>
+      <div class="role">Ph.D. Student in Computer Technology</div>
+      <div class="affil">Northeastern University</div>
+      <div class="location">Shenyang, China</div>
 
-                <div class="post-list-container">
-    <div class="post-inner">
-        
-            <article class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    
-                    <a href="/2022/04/19/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%8E%A8%E8%8D%90%E6%A8%A1%E5%9E%8B%E6%83%85%E5%86%B5%E6%80%BB%E7%BB%93/">
-                        <span class="post-title gt-c-content-color-first">深度学习推荐模型情况总结</span>
-                    </a>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p></p>
-                    </div>
-                    <div class="post-info">
-                        <span>
-                            <time class="post-time gt-c-content-color-first">
-                                · 2022-04-19 ·
-                            </time>
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </article>
-        
-            <article class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    
-                    <a href="/2022/04/19/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E4%BC%A0%E7%BB%9F%E6%A8%A1%E5%9E%8B%E6%83%85%E5%86%B5%E6%80%BB%E7%BB%93/">
-                        <span class="post-title gt-c-content-color-first">推荐系统传统模型情况总结</span>
-                    </a>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p></p>
-                    </div>
-                    <div class="post-info">
-                        <span>
-                            <time class="post-time gt-c-content-color-first">
-                                · 2022-04-19 ·
-                            </time>
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </article>
-        
-            <article class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    
-                    <a href="/2021/06/17/LSTPM/">
-                        <span class="post-title gt-c-content-color-first">LSTPM</span>
-                    </a>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p></p>
-                    </div>
-                    <div class="post-info">
-                        <span>
-                            <time class="post-time gt-c-content-color-first">
-                                · 2021-06-17 ·
-                            </time>
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </article>
-        
-            <article class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    
-                    <a href="/2021/06/08/TimeSAN/">
-                        <span class="post-title gt-c-content-color-first">TimeSAN</span>
-                    </a>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p></p>
-                    </div>
-                    <div class="post-info">
-                        <span>
-                            <time class="post-time gt-c-content-color-first">
-                                · 2021-06-08 ·
-                            </time>
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </article>
-        
-            <article class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    
-                    <a href="/2021/05/10/GERec/">
-                        <span class="post-title gt-c-content-color-first">GERec</span>
-                    </a>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p></p>
-                    </div>
-                    <div class="post-info">
-                        <span>
-                            <time class="post-time gt-c-content-color-first">
-                                · 2021-05-10 ·
-                            </time>
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </article>
-        
-            <article class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    
-                    <a href="/2021/04/28/HCT/">
-                        <span class="post-title gt-c-content-color-first">HCT</span>
-                    </a>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p></p>
-                    </div>
-                    <div class="post-info">
-                        <span>
-                            <time class="post-time gt-c-content-color-first">
-                                · 2021-04-28 ·
-                            </time>
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </article>
-        
-            <article class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    
-                    <a href="/2021/04/01/%E6%A8%A1%E6%8B%9F%E7%94%A8%E6%88%B7%E5%87%BA%E8%A1%8C%E5%86%B3%E7%AD%96/">
-                        <span class="post-title gt-c-content-color-first">模拟用户出行决策</span>
-                    </a>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p></p>
-                    </div>
-                    <div class="post-info">
-                        <span>
-                            <time class="post-time gt-c-content-color-first">
-                                · 2021-04-01 ·
-                            </time>
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </article>
-        
-            <article class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    
-                    <a href="/2021/03/05/TRAR/">
-                        <span class="post-title gt-c-content-color-first">TRAR</span>
-                    </a>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p></p>
-                    </div>
-                    <div class="post-info">
-                        <span>
-                            <time class="post-time gt-c-content-color-first">
-                                · 2021-03-05 ·
-                            </time>
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </article>
-        
-            <article class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    
-                    <a href="/2021/02/01/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-POI%E7%BB%BC%E8%BF%B0/">
-                        <span class="post-title gt-c-content-color-first">深度学习+POI综述</span>
-                    </a>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p></p>
-                    </div>
-                    <div class="post-info">
-                        <span>
-                            <time class="post-time gt-c-content-color-first">
-                                · 2021-02-01 ·
-                            </time>
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </article>
-        
-            <article class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    
-                    <a href="/2021/01/12/LA+RW/">
-                        <span class="post-title gt-c-content-color-first">LA+RW</span>
-                    </a>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p></p>
-                    </div>
-                    <div class="post-info">
-                        <span>
-                            <time class="post-time gt-c-content-color-first">
-                                · 2021-01-12 ·
-                            </time>
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </article>
-        
-    </div>
-</div>
+      <div class="links">
+        <a href="mailto:pengxianglan@stumail.neu.edu.cn">✉ Email</a>
+        <a href="https://scholar.google.com/citations?user=ULw0mF0AAAAJ" target="_blank" rel="noopener">🎓 Google Scholar</a>
+        <a href="https://dblp.org/pid/329/5834.html" target="_blank" rel="noopener">📚 DBLP</a>
+        <a href="https://github.com/LanPangxiang" target="_blank" rel="noopener">💻 GitHub</a>
+        <a href="/archives/">🗂 Blog Archive</a>
+      </div>
 
-<div class="pagination-container">
-    
-    
-        <a href="/page/2/" class="prev-page gt-a-link">下一页</a>
-    
-</div>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#publications">Publications</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#service">Service</a>
+        <a href="#honors">Honors</a>
+      </nav>
+    </aside>
 
-                <div class="site-footer gt-c-content-color-first">
-    <div class="footer-main">
-        <!-- 建议保留版权信息或者添加主题信息到友链，感谢您的理解 -->
-        <!-- 文件位置：layout/_includes/footer.ejs -->
-        <span style="text-align: right; float: right;">Theme <a 
-            href="https://github.com/renbaoshuo/hexo-theme-pure" target="_blank">Pure</a> | Powered by <a 
-            href="https://hexo.io" target="_blank">Hexo</a></span>
-        <span style="text-align: left;">Footer HTML
-</span>
-    </div>
-</div>
-
-            </div>
+    <main>
+      <section class="hero" id="about">
+        <p>Hello! I am <strong>Pengxiang Lan (兰鹏翔)</strong>, a Ph.D. student at the <strong>School of Computer Science and Engineering, Northeastern University</strong>. I am advised by <strong>Prof. Hai Zhao</strong> and <strong>Prof. Guibing Guo</strong>.</p>
+        <p>My research lies at the intersection of <strong>recommender systems, large language models, and spatio-temporal intelligence</strong>. I focus on next POI / next location recommendation, parameter-efficient fine-tuning, knowledge editing, generative recommendation, and test-time adaptation. My recent work explores how LLMs and generative models can better understand user mobility, recover incomplete behavioral signals, and model dynamic preferences under distribution shifts.</p>
+        <p>My work has appeared in <strong>SIGIR, ACL, AAAI, NAACL, WWW, DASFAA, ICWS</strong>, and <strong>Expert Systems with Applications (ESWA)</strong>.</p>
+        <div class="research-tags">
+          <span class="tag">Next POI Recommendation</span>
+          <span class="tag">LLMs for Recommendation</span>
+          <span class="tag">PEFT</span>
+          <span class="tag">Knowledge Editing</span>
+          <span class="tag">Generative Recommendation</span>
+          <span class="tag">Test-Time Adaptation</span>
         </div>
-    </body>
+      </section>
+
+      <section id="news">
+        <h2>🔥 News</h2>
+        <ul class="news">
+          <li><span class="date">2026.07</span><span>🎉 <strong>MPDC</strong> was published at <strong>SIGIR 2026</strong> as an <strong>Oral / Full Paper</strong>.</span></li>
+          <li><span class="date">2026.07</span><span>🎉 <strong>LaMDA</strong> was published in <strong>Findings of ACL 2026</strong>.</span></li>
+          <li><span class="date">2026.02</span><span>🎉 Our work on <strong>LLM-driven location completion and test-time training</strong> was accepted by <strong>ESWA</strong>.</span></li>
+          <li><span class="date">2026.02</span><span>🏅 Our patent on <strong>LLM-driven multi-perspective POI completion</strong> was granted.</span></li>
+          <li><span class="date">2025.11</span><span>🏅 Our patent on <strong>multi-factor expected location preference modeling</strong> was granted.</span></li>
+          <li><span class="date">2025</span><span>🎉 <strong>EPT</strong> and <strong>LAMP</strong> were published at <strong>AAAI 2025</strong> and <strong>NAACL 2025</strong>, respectively, both as Oral papers.</span></li>
+          <li><span class="date">2025</span><span>🎉 Our works on lifelong knowledge editing and OOD recommendation were published at <strong>ACL 2025</strong> and <strong>WWW 2025</strong>.</span></li>
+          <li><span class="date">2025–26</span><span>🏆 Awarded <strong>Outstanding Graduate Student of Northeastern University</strong>.</span></li>
+        </ul>
+      </section>
+
+      <section id="publications">
+        <h2>📝 Selected Publications</h2>
+
+        <article class="pub-card">
+          <div class="pub-mark"><div class="venue">SIGIR 2026 · ORAL</div><div class="abbr">MPDC</div></div>
+          <div>
+            <div class="pub-title">Multi-Perspective Driven Expected Location Preferences for Next POI Recommendations</div>
+            <div class="authors"><strong>Pengxiang Lan</strong>, Enneng Yang, Yuliang Liang, Jianzhe Zhao, Guibing Guo, Hai Zhao</div>
+            <div class="pub-meta">The 49th International ACM SIGIR Conference on Research and Development in Information Retrieval, 869–880.</div>
+            <div class="pub-links">
+              <a href="https://doi.org/10.1145/3805712.3809685" target="_blank" rel="noopener">DOI</a>
+              <a href="https://sigir2026.org/en-AU/pages/program/accepted-papers" target="_blank" rel="noopener">Program</a>
+              <a href="https://github.com/LanPangxiang/LaMDA2026" target="_blank" rel="noopener">Code</a>
+            </div>
+            <div class="pub-desc">Models authentic mobility preferences from behavioral and spatial perspectives and infers latent expected location preferences through diffusion-based contrastive learning.</div>
+          </div>
+        </article>
+
+        <article class="pub-card">
+          <div class="pub-mark purple"><div class="venue">ACL FINDINGS 2026</div><div class="abbr">LaMDA</div></div>
+          <div>
+            <div class="pub-title">LLM-Driven Multi-Perspective Location Completion for Next Location Prediction</div>
+            <div class="authors"><strong>Pengxiang Lan</strong>, Enneng Yang, Yuliang Liang, Jianzhe Zhao, Linying Jiang, Guibing Guo</div>
+            <div class="pub-meta">Findings of the Association for Computational Linguistics: ACL 2026, 5406–5428.</div>
+            <div class="pub-links">
+              <a href="https://aclanthology.org/2026.findings-acl.267/" target="_blank" rel="noopener">Paper</a>
+              <a href="https://aclanthology.org/2026.findings-acl.267.pdf" target="_blank" rel="noopener">PDF</a>
+              <a href="https://doi.org/10.18653/v1/2026.findings-acl.267" target="_blank" rel="noopener">DOI</a>
+              <a href="https://github.com/LanPangxiang/LaMDA2026" target="_blank" rel="noopener">Code</a>
+            </div>
+            <div class="pub-desc">Introduces dual LLM agents for micro- and macro-level mobility completion, with textual geographic descriptions, real-world candidate pools, and self-verification.</div>
+          </div>
+        </article>
+
+        <article class="pub-card">
+          <div class="pub-mark green"><div class="venue">ESWA 2026</div><div class="abbr">LCT³</div></div>
+          <div>
+            <div class="pub-title">LLM-Driven Location Completion and Test-Time Training for Next Location Prediction</div>
+            <div class="authors"><strong>Pengxiang Lan</strong>, Enneng Yang, Yuliang Liang, Jianzhe Zhao, Guibing Guo, Hai Zhao</div>
+            <div class="pub-meta">Expert Systems with Applications, 2026.</div>
+            <div class="pub-desc">Extends LLM-based location completion with collaborative test-time training to improve robustness under incomplete check-in records and distribution shifts.</div>
+          </div>
+        </article>
+
+        <article class="pub-card">
+          <div class="pub-mark orange"><div class="venue">AAAI 2025 · ORAL</div><div class="abbr">EPT</div></div>
+          <div>
+            <div class="pub-title">EPT: Efficient Prompt Tuning by Multi-Space Projection and Prompt Fusion</div>
+            <div class="authors"><strong>Pengxiang Lan</strong>, Enneng Yang, Yuting Liu, Guibing Guo, Jianzhe Zhao, Xingwei Wang</div>
+            <div class="pub-meta">AAAI Conference on Artificial Intelligence, 24366–24374.</div>
+            <div class="pub-links">
+              <a href="https://ojs.aaai.org/index.php/AAAI/article/view/34614" target="_blank" rel="noopener">Paper</a>
+              <a href="https://ojs.aaai.org/index.php/AAAI/article/download/34614/36769" target="_blank" rel="noopener">PDF</a>
+              <a href="https://doi.org/10.1609/aaai.v39i23.34614" target="_blank" rel="noopener">DOI</a>
+              <a href="https://arxiv.org/abs/2405.11464" target="_blank" rel="noopener">arXiv</a>
+            </div>
+            <div class="pub-desc">Improves prompt tuning efficiency and task adaptability through low-rank prompt decomposition, multi-space projection, and adaptive prompt fusion.</div>
+          </div>
+        </article>
+
+        <article class="pub-card">
+          <div class="pub-mark rose"><div class="venue">NAACL 2025 · ORAL</div><div class="abbr">LAMP</div></div>
+          <div>
+            <div class="pub-title">Efficient and Effective Prompt Tuning via Prompt Decomposition and Compressed Outer Product</div>
+            <div class="authors"><strong>Pengxiang Lan</strong>, Haoyu Xu, Enneng Yang, Yuliang Liang, Guibing Guo, Jianzhe Zhao, Xingwei Wang</div>
+            <div class="pub-meta">NAACL 2025, 4406–4421.</div>
+            <div class="pub-links">
+              <a href="https://aclanthology.org/2025.naacl-long.225/" target="_blank" rel="noopener">Paper</a>
+              <a href="https://aclanthology.org/2025.naacl-long.225.pdf" target="_blank" rel="noopener">PDF</a>
+              <a href="https://doi.org/10.18653/v1/2025.naacl-long.225" target="_blank" rel="noopener">DOI</a>
+              <a href="https://arxiv.org/abs/2502.12200" target="_blank" rel="noopener">arXiv</a>
+            </div>
+            <div class="pub-desc">Reduces prompt tuning parameters through truncated-SVD prompt decomposition while strengthening interactions among prompt tokens with compressed outer products.</div>
+          </div>
+        </article>
+
+        <h3>Other Publications</h3>
+        <ul class="compact-pub">
+          <li><strong>[ACL 2025]</strong> <strong>Knowledge Decoupling via Orthogonal Projection for Lifelong Editing of Large Language Models.</strong> Haoyu Xu, <strong>Pengxiang Lan</strong>, Enneng Yang, Guibing Guo, Jianzhe Zhao, Linying Jiang, Xingwei Wang. <a href="https://aclanthology.org/2025.acl-long.646/" target="_blank" rel="noopener">Paper</a> · <a href="https://doi.org/10.18653/v1/2025.acl-long.646" target="_blank" rel="noopener">DOI</a></li>
+          <li><strong>[WWW 2025]</strong> <strong>Graph Representation Learning via Causal Diffusion for Out-of-Distribution Recommendation.</strong> Chu Zhao, Enneng Yang, Yuliang Liang, <strong>Pengxiang Lan</strong>, Yuting Liu, Jianzhe Zhao, Guibing Guo, Xingwei Wang. <a href="https://doi.org/10.1145/3696410.3714849" target="_blank" rel="noopener">DOI</a> · <a href="https://arxiv.org/abs/2408.00490" target="_blank" rel="noopener">arXiv</a> · <a href="https://github.com/user683/CausalDiffRec" target="_blank" rel="noopener">Code</a></li>
+          <li><strong>[DASFAA 2023 · Oral]</strong> <strong>Spatio-Temporal Position-Extended and Gated-Deep Network for Next POI Recommendation.</strong> <strong>Pengxiang Lan</strong>, Yihao Zhang, Haoran Xiang, Yuhao Wang, Wei Zhou. <a href="https://doi.org/10.1007/978-3-031-30672-3_34" target="_blank" rel="noopener">DOI</a></li>
+          <li><strong>[ICWS 2022 · Oral]</strong> <strong>Spatio-Temporal Mogrifier LSTM and Attention Network for Next POI Recommendation.</strong> Yihao Zhang, <strong>Pengxiang Lan</strong>, Yuhao Wang, Haoran Xiang. <a href="https://doi.org/10.1109/ICWS55610.2022.00019" target="_blank" rel="noopener">DOI</a></li>
+        </ul>
+      </section>
+
+      <section id="education">
+        <h2>📖 Education</h2>
+        <div class="timeline">
+          <div class="timeline-item"><div class="timeline-date">2023.09 – Present</div><div><div class="timeline-title">Ph.D. in Computer Technology · Northeastern University</div><div class="timeline-sub">School of Computer Science and Engineering · Advisors: Prof. Hai Zhao and Prof. Guibing Guo</div></div></div>
+          <div class="timeline-item"><div class="timeline-date">2020.09 – 2023.07</div><div><div class="timeline-title">M.S. in Computer Application Technology · Chongqing University of Technology</div><div class="timeline-sub">Liangjiang Artificial Intelligence College · Advisor: Assoc. Prof. Yihao Zhang</div></div></div>
+          <div class="timeline-item"><div class="timeline-date">2016.09 – 2020.07</div><div><div class="timeline-title">B.E. in Software Engineering · Hefei Normal University</div><div class="timeline-sub">School of Computer Science</div></div></div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>🚀 Research & Project Experience</h2>
+        <div class="project">
+          <div class="project-title">Personalized and Efficient Fine-Tuning for On-Device Large Language Models</div>
+          <div class="project-meta">Project Lead · 2024.07 – 2025.07</div>
+          <p>Led the overall technical roadmap and R&D execution for efficient personalization of on-device LLMs. Designed parameter-efficient prompt tuning combining model quantization and truncated SVD, developed LLM-based heterogeneous user-data modeling, and explored robust federated learning with client filtering and adaptive differential privacy.</p>
+        </div>
+        <div class="project">
+          <div class="project-title">Multi-Context Next POI Recommendation</div>
+          <div class="project-meta">Project Lead · 2021.05 – 2022.04</div>
+          <p>Led next-POI recommendation modeling with multi-source spatio-temporal context, combining Mogrifier LSTM, multi-head self-attention, location-salient and time-weighting mechanisms, and geographic non-local modeling for dynamic preference learning.</p>
+        </div>
+        <div class="project">
+          <div class="project-title">Recommendation Algorithm Internship · NetEase Cloud Music</div>
+          <div class="project-meta">Hangzhou · 2022.05 – 2022.07</div>
+          <p>Worked as a recommendation algorithm intern on industrial recommendation tasks.</p>
+        </div>
+      </section>
+
+      <section id="patents">
+        <h2>📜 Patents</h2>
+        <ul class="compact-pub">
+          <li><strong>Pengxiang Lan</strong>, Guibing Guo. LLM-driven multi-perspective POI completion method and system. Granted patent <strong>CN121278193B</strong>, Feb. 10, 2026.</li>
+          <li><strong>Pengxiang Lan</strong>, Guibing Guo. Multi-factor-driven expected location preference modeling for POI recommendation. Granted patent <strong>CN120632180B</strong>, Nov. 4, 2025.</li>
+          <li>Yihao Zhang, <strong>Pengxiang Lan</strong>. Next POI recommendation method based on improved LSTM and location jumping. Granted patent <strong>CN114896481B</strong>, Nov. 26, 2024.</li>
+        </ul>
+      </section>
+
+      <section id="service">
+        <h2>💻 Academic Service</h2>
+        <div class="two-col">
+          <div class="mini-card">
+            <h3>Conference Reviewer</h3>
+            <ul>
+              <li>NeurIPS 2026</li>
+              <li>SIGIR 2026, SIGIR 2025</li>
+              <li>AAAI 2026</li>
+              <li>ACL 2026</li>
+              <li>ECAI 2025</li>
+            </ul>
+          </div>
+          <div class="mini-card">
+            <h3>Journal Reviewer</h3>
+            <ul>
+              <li>IEEE Transactions on Computational Social Systems (TCSS), 2026</li>
+              <li>ACM Transactions on Knowledge Discovery from Data (TKDD), 2026</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="honors">
+        <h2>🎖 Honors & Awards</h2>
+        <ul class="compact-pub">
+          <li><strong>2025–2026</strong> · Outstanding Graduate Student, Northeastern University</li>
+          <li><strong>2022–2023</strong> · Outstanding Graduate Student, Chongqing University of Technology</li>
+          <li><strong>2021–2022</strong> · First-Class Academic Scholarship, Chongqing University of Technology</li>
+          <li><strong>2019–2020</strong> · Outstanding Graduate of Anhui Province</li>
+          <li><strong>2018–2019</strong> · National Encouragement Scholarship</li>
+          <li><strong>2016–2017</strong> · National Encouragement Scholarship</li>
+        </ul>
+      </section>
+
+      <footer>
+        Last updated: August 2026 · Historical blog posts remain available through <a href="/archives/">Blog Archive</a>.
+      </footer>
+    </main>
+  </div>
+</body>
 </html>
